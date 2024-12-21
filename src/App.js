@@ -1,22 +1,28 @@
-import logo from "./logo.svg";
-import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+
+// pages
+import Home from "../src/pages/Home.js";
+import Illustration from "./pages/Illustration.js";
+import Design from "./pages/Design.js";
 
 function App() {
+  const ROUTER_BASENAME = process.env.REACT_APP_ROUTER_BASENAME;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>My React App</p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-    </div>
+    <Router basename={ROUTER_BASENAME}>
+      <div className="App">
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/illustration" element={<Illustration />} />
+          <Route path="/design" element={<Design />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
