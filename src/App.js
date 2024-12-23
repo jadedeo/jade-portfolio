@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // pages
 import Home from "../src/pages/Home.js";
@@ -8,16 +8,14 @@ import Development from "./pages/Development.js";
 
 function App() {
   return (
-    <Router basename="/jade-portfolio">
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/doodles" element={<Doodles />} />
-          <Route path="/design" element={<Design />} />
-          <Route path="/development" element={<Development />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/doodles" element={<Doodles />} />
+        <Route path="/design" element={<Design />} />
+        <Route path="/development" element={<Development />} />
+      </Routes>
+    </div>
   );
 }
 

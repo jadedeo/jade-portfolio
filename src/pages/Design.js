@@ -5,9 +5,11 @@ import Header from "../components/Header";
 
 const Design = () => {
   return (
-    <div id="home-page">
-      <h1>Design!</h1>
+    <div id="design-page">
       <Header />
+      <main>
+        <h1 className="font-display">Design!</h1>
+      </main>
     </div>
   );
 };

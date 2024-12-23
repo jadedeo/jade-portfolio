@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { useLocation } from "react-router-dom";
 
 //components
 
 const Navbar = () => {
+  const location = useLocation();
+  console.log(location);
+
+  const NavTag = location.pathname == "/" ? motion.nav : "nav";
+
   return (
-    <motion.nav
+    <NavTag
       id="site-navbar"
       initial={{ y: 25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -21,7 +27,7 @@ const Navbar = () => {
       <Link to="/development" className="p-2">
         development
       </Link>
-    </motion.nav>
+    </NavTag>
   );
 };
 
