@@ -2,11 +2,14 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <div>
-      <h1>IMG</h1>
-      <h1 className="underline bg-red-300">jade deo</h1>
+    <header id="site-header" className="flex w-full justify-between py-3">
+      <div className="flex py-2 gap-10">
+        <h1 className="">IMG</h1>
+        <h1 className="">jade deo</h1>
+      </div>
+
       <Navbar />
-    </div>
+    </header>
   );
 };
 
