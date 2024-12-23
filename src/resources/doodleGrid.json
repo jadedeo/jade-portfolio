@@ -1,12 +1,32 @@
 [
   {
-    "image": "doodles/daughtersOfIzdihar.JPG",
+    "imagePath": "doodles/daughtersOfIzdihar.JPG",
     "title": "Malak's Office",
     "description": null
   },
   {
-    "image": "doodles/houseOfBadawi.JPG",
+    "imagePath": "doodles/houseOfBadawi.JPG",
     "title": "House of Badawi",
+    "description": "Lorem ipsum blah blah blah"
+  },
+  {
+    "imagePath": "doodles/shae.JPG",
+    "title": "The Weatherman",
+    "description": null
+  },
+  {
+    "imagePath": "doodles/tatreez.JPG",
+    "title": "Tatreez",
+    "description": null
+  },
+  {
+    "imagePath": "doodles/fathomsZine.JPG",
+    "title": "Fathoms",
+    "description": "Lorem ipsum blah blah blah"
+  },
+  {
+    "imagePath": "doodles/maliyaDark.JPG",
+    "title": "You Are Like Ink",
     "description": "Lorem ipsum blah blah blah"
   }
 ]

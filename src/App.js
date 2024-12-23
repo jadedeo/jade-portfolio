@@ -8,7 +8,7 @@ import Development from "./pages/Development.js";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-200 h-100dvh">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/doodles" element={<Doodles />} />
