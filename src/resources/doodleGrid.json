@@ -1,32 +1,44 @@
 [
   {
     "imagePath": "doodles/daughtersOfIzdihar.JPG",
+    "isPublished": false,
     "title": "Malak's Office",
-    "description": null
+    "subtitle": null,
+    "description": "<span>An illustration inspired by <em>The Daughters of Izdihar</em>, written by Hadeer Elsbai and published by Harper Voyager.</span><span><br>Features the characters Malak Mamdouh and Nehal Darwish © Hadeer Elsbai</span>"
   },
   {
     "imagePath": "doodles/houseOfBadawi.JPG",
+    "isPublished": true,
     "title": "House of Badawi",
-    "description": "Lorem ipsum blah blah blah"
+    "subtitle": "Bowne Street Press",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit."
   },
   {
     "imagePath": "doodles/shae.JPG",
+    "isPublished": false,
     "title": "The Weatherman",
-    "description": null
+    "subtitle": null,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit."
   },
   {
     "imagePath": "doodles/tatreez.JPG",
+    "isPublished": false,
     "title": "Tatreez",
-    "description": null
+    "subtitle": null,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit."
   },
   {
     "imagePath": "doodles/fathomsZine.JPG",
-    "title": "Fathoms",
-    "description": "Lorem ipsum blah blah blah"
+    "isPublished": true,
+    "title": "Leafy Seadragon",
+    "subtitle": "Fathoms Mermay Zine",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit."
   },
   {
     "imagePath": "doodles/maliyaDark.JPG",
+    "isPublished": false,
     "title": "You Are Like Ink",
-    "description": "Lorem ipsum blah blah blah"
+    "subtitle": null,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit."
   }
 ]
