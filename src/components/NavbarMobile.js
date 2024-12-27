@@ -4,15 +4,18 @@ import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 import routes from "../resources/routes.json";
+import { useLocation } from "react-router-dom";
 
 const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
+  const location = useLocation();
+  const isHomepage = location.pathname == "/" ? true : false;
 
   useClickAway(ref, () => setOpen(false));
 
   return (
-    <div ref={ref} className="md:hidden ">
+    <nav ref={ref} className="md:hidden" id="mobile-navbar">
       <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
       <AnimatePresence>
         {isOpen && (
@@ -21,7 +24,7 @@ const NavMobile = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="h-full fixed left-0 shadow-4xl right-0 top-[5rem] p-5 pt-0 bg-slate-50"
+            className="h-full fixed left-0 shadow-4xl right-0 top-[5rem] p-5 pt-0 bg-slate-50 z-[999]"
           >
             <ul className="grid gap-2">
               {routes.map((route, index) => {
@@ -58,7 +61,7 @@ const NavMobile = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </nav>
   );
 };
 

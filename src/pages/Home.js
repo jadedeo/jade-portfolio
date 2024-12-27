@@ -2,11 +2,14 @@ import React from "react";
 import { motion } from "motion/react";
 
 // components
-import Navbar from "../components/Navbar";
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
     <div id="home-page">
+      {/* <Header /> */}
       <main className="h-dvh flex flex-col items-center justify-center">
         <div className="hidden sm:flex w-full justify-center gap-5">
           <motion.h1
@@ -33,7 +36,8 @@ const Home = () => {
           <h1 className="font-display font-bold text-6xl">jade deo</h1>
         </div>
 
-        <Navbar />
+        <NavbarDesktop />
+        <NavbarMobile />
       </main>
     </div>
   );

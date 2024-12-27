@@ -1,14 +1,11 @@
 import React from "react";
 
 // components
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
-
-// other imports
 import CloseIcon from "@mui/icons-material/Close";
 
 const DoodleModal = ({ onClose, open, image }) => {
@@ -19,22 +16,21 @@ const DoodleModal = ({ onClose, open, image }) => {
       sx={{
         "& .MuiDialog-container": {
           "& .MuiPaper-root": {
-            width: "100%", // Full width but will respect the maxWidth
-            maxWidth: "800px", // Adjust maxWidth to fit your design
+            width: "100%",
+            maxWidth: "900px",
           },
         },
       }}
     >
       <DialogContent
         sx={{
-          display: "flex", // Flex container for side-by-side layout
-          flexDirection: "row", // Content flows horizontally
-          alignItems: "flex-start", // Align items at the start of the flex container
-          overflow: "hidden", // Prevents overflow
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "flex-start",
+          overflow: "hidden",
         }}
         className="gap-5"
       >
-        {/* Image container */}
         <div
           style={{
             maxWidth: "50%",
@@ -49,7 +45,7 @@ const DoodleModal = ({ onClose, open, image }) => {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        {/* Text content container */}
+
         <div style={{ flexGrow: 1, flexShrink: 1, overflowY: "auto" }}>
           <DialogActions>
             <IconButton onClick={onClose}>
@@ -57,7 +53,15 @@ const DoodleModal = ({ onClose, open, image }) => {
             </IconButton>
           </DialogActions>
           <div className="h-full flex flex-col mt-5">
-            <DialogTitle sx={{ padding: 0 }}>{image.title}</DialogTitle>
+            <DialogTitle
+              sx={{
+                padding: 0,
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: "bold",
+              }}
+            >
+              {image.title}
+            </DialogTitle>
             <p>{image.subtitle}</p>
             <hr className="my-3" />
             <p

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { AsyncImage } from "loadable-image";
 
 import DoodleModal from "./DoodleModal";
 
@@ -9,7 +10,6 @@ const DoodleCard = ({ image }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
-    // console.log("image", image);
     setOpen(true);
   };
 
@@ -27,17 +27,23 @@ const DoodleCard = ({ image }) => {
         className="bg-slate-50 cursor-pointer"
         onClick={handleClickOpen}
       >
-        <img src={image.imagePath} className="" />
+        <AsyncImage
+          src={image.imagePath}
+          style={{
+            width: "100%",
+            height: "auto",
+            aspectRatio: image.aspectRatio.width / image.aspectRatio.height,
+          }}
+          // Transition={Blur}
+          loader={<div style={{ background: "#e2e8f0" }} />}
+          error={<div style={{ background: "#eee" }} />}
+        />
         {image.isPublished && (
           <div className="flex flex-col gap-2 p-4">
             <div className="flex flex-col items-start">
               <h3 className="font-display font-bold">{image.title}</h3>
               {image.subtitle && <small className="">{image.subtitle}</small>}
             </div>
-            <hr></hr>
-            <small
-              dangerouslySetInnerHTML={{ __html: image.description }}
-            ></small>
           </div>
         )}
       </motion.div>

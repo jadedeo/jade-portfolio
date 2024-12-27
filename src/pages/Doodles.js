@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 
 // components
 import Header from "../components/Header";
@@ -29,16 +29,35 @@ const Doodles = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+      },
+    }),
+  };
+
   return (
     <div id="doodles-page">
       <Header />
       <main className="py-10 px-[10%]">
         <Masonry columns={columns} spacing={{ xs: 2, sm: 2, md: 3 }}>
-          <AnimatePresence>
-            {imageInfo.map((image, index) => {
-              return <DoodleCard key={index} image={image} />;
-            })}
-          </AnimatePresence>
+          {imageInfo.map((image, index) => {
+            return (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={index} // Custom prop for staggered animation
+              >
+                <DoodleCard key={index} image={image} />
+              </motion.div>
+            );
+          })}
         </Masonry>
       </main>
     </div>
