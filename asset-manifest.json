@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jade-portfolio/static/css/main.095936de.css",
-    "main.js": "/jade-portfolio/static/js/main.00c459b8.js",
+    "main.css": "/jade-portfolio/static/css/main.35646f5e.css",
+    "main.js": "/jade-portfolio/static/js/main.636040b7.js",
     "static/js/453.ecfa0c75.chunk.js": "/jade-portfolio/static/js/453.ecfa0c75.chunk.js",
     "index.html": "/jade-portfolio/index.html",
-    "main.095936de.css.map": "/jade-portfolio/static/css/main.095936de.css.map",
-    "main.00c459b8.js.map": "/jade-portfolio/static/js/main.00c459b8.js.map",
+    "main.35646f5e.css.map": "/jade-portfolio/static/css/main.35646f5e.css.map",
+    "main.636040b7.js.map": "/jade-portfolio/static/js/main.636040b7.js.map",
     "453.ecfa0c75.chunk.js.map": "/jade-portfolio/static/js/453.ecfa0c75.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.095936de.css",
-    "static/js/main.00c459b8.js"
+    "static/css/main.35646f5e.css",
+    "static/js/main.636040b7.js"
   ]
 }
