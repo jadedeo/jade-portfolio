@@ -39,7 +39,7 @@ const NavMobile = () => {
                       delay: 0.1 + index / 10,
                     }}
                     key={route.title}
-                    className="w-full p-[0.08rem] rounded-xl "
+                    className="w-full p-[0.08rem] "
                   >
                     <motion.a
                       whileHover={{
@@ -48,7 +48,7 @@ const NavMobile = () => {
                       }}
                       onClick={() => setOpen((prev) => !prev)}
                       className={
-                        "flex items-center justify-between w-full p-5 rounded-xl bg-slate-50"
+                        "flex items-center justify-between w-full p-5 bg-slate-50"
                       }
                       href={route.href}
                     >

@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 const Header = () => {
   const location = useLocation();
   const isHomepage = location.pathname == "/" ? true : false;
-  console.log("isHomepage", isHomepage);
+  // console.log("isHomepage", isHomepage);
 
   return (
     !isHomepage && (

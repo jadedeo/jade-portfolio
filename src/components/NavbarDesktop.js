@@ -11,7 +11,7 @@ const NavbarDesktop = () => {
   const NavTag = isHomepage ? motion.nav : "nav";
   const LinkTag = isHomepage ? Link : motion.create(Link);
 
-  console.log("isHomepage", isHomepage);
+  // console.log("isHomepage", isHomepage);
 
   return (
     <NavTag

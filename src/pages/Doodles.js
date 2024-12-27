@@ -7,7 +7,7 @@ import DoodleCard from "../components/DoodleCard";
 import { Masonry } from "@mui/lab";
 
 // other imports
-import imageInfo from "../resources/doodleGrid";
+import doodleList from "../resources/doodleList";
 
 const Doodles = () => {
   const [columns, setColumns] = useState(3);
@@ -45,14 +45,14 @@ const Doodles = () => {
       <Header />
       <main className="py-10 px-[10%]">
         <Masonry columns={columns} spacing={{ xs: 2, sm: 2, md: 3 }}>
-          {imageInfo.map((image, index) => {
+          {doodleList.map((image, index) => {
             return (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 initial="hidden"
                 animate="visible"
-                custom={index} // Custom prop for staggered animation
+                custom={index}
               >
                 <DoodleCard key={index} image={image} />
               </motion.div>

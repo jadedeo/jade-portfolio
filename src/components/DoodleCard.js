@@ -5,8 +5,6 @@ import { AsyncImage } from "loadable-image";
 import DoodleModal from "./DoodleModal";
 
 const DoodleCard = ({ image }) => {
-  //   console.log("working with:", image);
-
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -34,15 +32,14 @@ const DoodleCard = ({ image }) => {
             height: "auto",
             aspectRatio: image.aspectRatio.width / image.aspectRatio.height,
           }}
-          // Transition={Blur}
-          loader={<div style={{ background: "#e2e8f0" }} />}
+          loader={<div style={{ background: "#fff" }} />}
           error={<div style={{ background: "#eee" }} />}
         />
         {image.isPublished && (
           <div className="flex flex-col gap-2 p-4">
             <div className="flex flex-col items-start">
-              <h3 className="font-display font-bold">{image.title}</h3>
-              {image.subtitle && <small className="">{image.subtitle}</small>}
+              <h2 className="font-display text-lg font-bold">{image.title}</h2>
+              {image.subtitle && <p className="">{image.subtitle}</p>}
             </div>
           </div>
         )}
