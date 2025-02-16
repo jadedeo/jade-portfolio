@@ -1,20 +1,32 @@
+import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // pages
-import Home from "../src/pages/Home.js";
-import Doodles from "./pages/Doodles.js";
-import Design from "./pages/Design.js";
-import Development from "./pages/Development.js";
+// import Home from "../src/pages/Home.js";
+// import Doodles from "./pages/Doodles.js";
+// import Design from "./pages/Design.js";
+// import Development from "./pages/Development.js";
+
+import routes from "../src/resources/routes.json";
+import { capitalize } from "../src/resources/utils.js";
+
+const DynamicImport = (name) => {
+  return React.lazy(() => import(`./pages/${capitalize(name)}`));
+};
 
 function App() {
   return (
     <div className="App bg-slate-200 h-100dvh">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/doodles" element={<Doodles />} />
-        <Route path="/design" element={<Design />} />
-        <Route path="/development" element={<Development />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {routes.map((route, index) => {
+            const Component = DynamicImport(route.title);
+            return (
+              <Route key={index} path={route.href} element={<Component />} />
+            );
+          })}
+        </Routes>
+      </Suspense>
     </div>
   );
 }

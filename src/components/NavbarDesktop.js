@@ -21,25 +21,32 @@ const NavbarDesktop = () => {
       transition={{ duration: 0.7, delay: 0.5, ease: "easeInOut" }}
       className="hidden md:flex gap-[2em] items-center"
     >
-      {routes.map((route, index) => {
-        return isHomepage ? (
-          <LinkTag key={index} to={route.href} className="py-2 px-4">
-            {route.title}
-          </LinkTag>
-        ) : (
-          <LinkTag
-            key={index}
-            to={route.href}
-            className="py-2 px-4"
-            whileHover={{
-              backgroundColor: "#F1F5F9",
-              transition: { duration: 0.5 },
-            }}
-          >
-            {route.title}
-          </LinkTag>
-        );
-      })}
+      {routes
+        .filter(
+          (route) =>
+            route.title == "doodles" ||
+            route.title == "design" ||
+            route.title == "development"
+        )
+        .map((route, index) => {
+          return isHomepage ? (
+            <LinkTag key={index} to={route.href} className="py-2 px-4">
+              {route.title}
+            </LinkTag>
+          ) : (
+            <LinkTag
+              key={index}
+              to={route.href}
+              className="py-2 px-4"
+              whileHover={{
+                backgroundColor: "#F1F5F9",
+                transition: { duration: 0.5 },
+              }}
+            >
+              {route.title}
+            </LinkTag>
+          );
+        })}
     </NavTag>
   );
 };

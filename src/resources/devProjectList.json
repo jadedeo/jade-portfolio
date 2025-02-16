@@ -5,7 +5,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
     "image": "projectPlaceholder.png",
     "logo": "development/prhLogo.png",
-    "tech": ["Vue.js", "Laravel", "PHP", "Tailwind CSS"]
+    "tech": ["Vue.js", "Laravel", "PHP", "Tailwind CSS"],
+    "link": "/development/splash"
   },
   {
     "title": "Division Platform",
@@ -13,6 +14,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
     "image": "projectPlaceholder.png",
     "logo": "development/prhLogo.png",
-    "tech": ["ReactJS", "WordPress", "Tailwind CSS", "PHP"]
+    "tech": ["ReactJS", "WordPress", "Tailwind CSS", "PHP"],
+    "link": "/development/divisonplatform"
   }
 ]

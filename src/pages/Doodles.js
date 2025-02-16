@@ -8,6 +8,7 @@ import { Masonry } from "@mui/lab";
 
 // other imports
 import doodleList from "../resources/doodleList";
+import { itemVariants } from "../resources/utils";
 
 const Doodles = () => {
   const [columns, setColumns] = useState(3);
@@ -28,17 +29,6 @@ const Doodles = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-      },
-    }),
-  };
 
   return (
     <div id="doodles-page">
