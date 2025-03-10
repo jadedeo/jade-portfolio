@@ -2,19 +2,25 @@
   {
     "title": "Splash",
     "subtitle": "Penguin Random House",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
-    "image": "projectPlaceholder.png",
-    "logo": "development/prhLogo.png",
-    "tech": ["Vue.js", "Laravel", "PHP", "Tailwind CSS"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit. Vivamus tincidunt sapien et quam ultrices hendrerit.",
+    "image": "placeholder1.jpeg",
+    "skills": ["Vue.js", "Laravel", "PHP", "Tailwind CSS"],
     "link": "/development/splash"
   },
   {
     "title": "Division Platform",
     "subtitle": "Penguin Random House",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
-    "image": "projectPlaceholder.png",
-    "logo": "development/prhLogo.png",
-    "tech": ["ReactJS", "WordPress", "Tailwind CSS", "PHP"],
-    "link": "/development/divisonplatform"
+    "image": "placeholder2.jpeg",
+    "skills": ["ReactJS", "WordPress", "Tailwind CSS", "PHP"],
+    "link": "/development/divisionplatform"
+  },
+  {
+    "title": "LitTunes",
+    "subtitle": "CMU Coursework",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
+    "image": "placeholder3.jpeg",
+    "skills": ["ReactJS", "React Redux"],
+    "link": "/development/divisionplatform"
   }
 ]

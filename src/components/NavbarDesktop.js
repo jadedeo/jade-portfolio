@@ -34,15 +34,7 @@ const NavbarDesktop = () => {
               {route.title}
             </LinkTag>
           ) : (
-            <LinkTag
-              key={index}
-              to={route.href}
-              className="py-2 px-4"
-              whileHover={{
-                backgroundColor: "#F1F5F9",
-                transition: { duration: 0.5 },
-              }}
-            >
+            <LinkTag key={index} to={route.href} className="py-2 px-4">
               {route.title}
             </LinkTag>
           );

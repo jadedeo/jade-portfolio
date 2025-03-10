@@ -12,8 +12,8 @@ const Design = () => {
   return (
     <div id="design-page">
       <Header />
-      <main className="min-h-[100dvh] py-10 px-[10%]">
-        <section id="dev-projects-list" className="flex flex-col gap-5">
+      <main className="min-h-[100dvh] py-10 px-[5%]">
+        <section id="design-projects-list" className="grid grid-cols-2">
           {designProjectList.map((project, index) => {
             return (
               <motion.div
@@ -23,7 +23,7 @@ const Design = () => {
                 animate="visible"
                 custom={index}
               >
-                <ProjectCard key={index} project={project} />
+                <ProjectCard key={index} id={index + 1} project={project} />
               </motion.div>
             );
           })}

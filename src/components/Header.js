@@ -12,12 +12,12 @@ const Header = () => {
     !isHomepage && (
       <header
         id="site-header"
-        className="flex w-full justify-between py-3 px-10 bg-slate-50"
+        className="flex w-full justify-between py-3 px-10 "
       >
         <Link to="/">
           <div className="flex py-2 gap-3 items-center">
             <img src="logo.png" className="h-10" />
-            <h1 className="text-xl font-semibold font-display">jade deo</h1>
+            {/* <h1 className="text-xl font-semibold font-display">jade deo</h1> */}
           </div>
         </Link>
 

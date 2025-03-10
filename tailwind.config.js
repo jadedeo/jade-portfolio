@@ -9,9 +9,9 @@ module.exports = {
       xl: "1440px",
     },
     fontFamily: {
-      sans: ["ui-sans-serif", "AbeeZee", "system-ui"],
-      display: ["Montserrat"],
-      body: ['"AbeeZee"'],
+      sans: ["ui-sans-serif", "Figtree", "system-ui"],
+      display: ["Murmure"],
+      body: ['"Figtree"'],
     },
     extend: {},
   },

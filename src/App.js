@@ -16,7 +16,7 @@ const DynamicImport = (name) => {
 
 function App() {
   return (
-    <div className="App bg-slate-200 h-100dvh">
+    <div className="App bg-white h-100dvh">
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           {routes.map((route, index) => {
