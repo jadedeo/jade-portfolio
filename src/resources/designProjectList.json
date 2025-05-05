@@ -1,14 +1,30 @@
 [
-  {
-    "title": "Website Revamp",
-    "subtitle": "Blk + Brwn Book Designers",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
-    "image": "projectPlaceholder.png"
-  },
-  {
-    "title": "Libby Something Something",
-    "subtitle": "CMU Coursework",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
-    "image": "projectPlaceholder.png"
-  }
+    {
+        "title": "Website Revamp",
+        "subtitle": "Blk + Brwn Book Designers",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
+        "tags": ["UX Design", "UI Design"],
+        "image": "projectPlaceholder.png"
+    },
+    {
+        "title": "Libby Something Something Long Title Blah Blah",
+        "subtitle": "Coursework",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit. Praesent gravida arcu dui, ut eleifend felis congue sit amet.",
+        "tags": ["UX Design", "UI Design"],
+        "image": "projectPlaceholder.png"
+    },
+    {
+        "title": "Libby Something Something",
+        "subtitle": "Coursework",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet.",
+        "tags": ["UX Design", "UI Design", "Service Design"],
+        "image": "projectPlaceholder.png"
+    },
+    {
+        "title": "Libby Something Something",
+        "subtitle": "Coursework",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
+        "tags": ["UX Design", "UI Design"],
+        "image": "projectPlaceholder.png"
+    }
 ]

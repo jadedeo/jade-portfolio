@@ -24,9 +24,8 @@ const NavbarDesktop = () => {
       {routes
         .filter(
           (route) =>
-            route.title == "doodles" ||
-            route.title == "design" ||
-            route.title == "development"
+            // route.title == "doodles" ||
+            route.title == "design" || route.title == "development"
         )
         .map((route, index) => {
           return isHomepage ? (

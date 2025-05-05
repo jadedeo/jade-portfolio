@@ -10,20 +10,23 @@ const Header = () => {
 
   return (
     !isHomepage && (
-      <header
-        id="site-header"
-        className="flex w-full justify-between py-3 px-10 "
-      >
-        <Link to="/">
-          <div className="flex py-2 gap-3 items-center">
-            <img src="logo.png" className="h-10" />
-            {/* <h1 className="text-xl font-semibold font-display">jade deo</h1> */}
-          </div>
-        </Link>
+      <>
+        <header
+          id="site-header"
+          className="flex w-full justify-between py-3 px-[5%]"
+        >
+          <Link to="/">
+            <div className="flex py-2 gap-3 items-center">
+              {/* <img src="logo.png" className="h-10" /> */}
+              <h3 className="font-semibold font-display">jade deo</h3>
+            </div>
+          </Link>
 
-        <NavbarDesktop />
-        <NavbarMobile />
-      </header>
+          <NavbarDesktop />
+          <NavbarMobile />
+        </header>
+        <hr className="mx-[5%]"></hr>
+      </>
     )
   );
 };
