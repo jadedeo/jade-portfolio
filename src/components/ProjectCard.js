@@ -37,7 +37,7 @@ const ProjectCard = ({ id, project, orientation = "vertical" }) => {
     return (
         <>
             {orientation === "vertical" ? (
-                <div className="projectcard-vertical-component grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 max-w-screen-sm hover:shadow-xl bg-white">
+                <div className="projectcard-vertical-component grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 hover:shadow-xl bg-white">
                     <div className="w-full ">
                         <img
                             src={project.image}
