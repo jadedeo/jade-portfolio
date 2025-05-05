@@ -68,38 +68,6 @@ const Design = () => {
                         );
                     })}
                 </section>
-                <div className="flex gap-10 py-5 max-w-screen-xl mx-auto">
-                    <Quote
-                        subheading={"My quote subheading!"}
-                        image={"/userPlaceholder.png"}
-                    >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed at ex quis enim suscipit tincidunt.{" "}
-                            <strong>
-                                Quisque et libero vitae tortor maximus
-                                pellentesque
-                            </strong>{" "}
-                            sit amet vel quam. Proin elit eros, sollicitudin non
-                            nisi sed, iaculis dignissim massa.
-                        </p>
-                    </Quote>
-                    <Quote
-                        subheading={"My quote subheading!"}
-                        image={"/userPlaceholder.png"}
-                    >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed at ex quis enim suscipit tincidunt.{" "}
-                            <strong>
-                                Quisque et libero vitae tortor maximus
-                                pellentesque
-                            </strong>{" "}
-                            sit amet vel quam. Proin elit eros, sollicitudin non
-                            nisi sed, iaculis dignissim massa.
-                        </p>
-                    </Quote>
-                </div>
 
                 <TextGroup
                     heading={"Sample Heading"}
@@ -178,6 +146,38 @@ const Design = () => {
                     </p>
                 </TextImage>
 
+                <div className="flex gap-10 py-5 max-w-screen-xl mx-auto">
+                    <Quote
+                        subheading={"My quote subheading!"}
+                        image={"/userPlaceholder.png"}
+                    >
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Sed at ex quis enim suscipit tincidunt.{" "}
+                            <strong>
+                                Quisque et libero vitae tortor maximus
+                                pellentesque
+                            </strong>{" "}
+                            sit amet vel quam. Proin elit eros, sollicitudin non
+                            nisi sed, iaculis dignissim massa.
+                        </p>
+                    </Quote>
+                    <Quote
+                        subheading={"My quote subheading!"}
+                        image={"/userPlaceholder.png"}
+                    >
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Sed at ex quis enim suscipit tincidunt.{" "}
+                            <strong>
+                                Quisque et libero vitae tortor maximus
+                                pellentesque
+                            </strong>{" "}
+                            sit amet vel quam. Proin elit eros, sollicitudin non
+                            nisi sed, iaculis dignissim massa.
+                        </p>
+                    </Quote>
+                </div>
                 {/* <section
                     id="design-projects-list"
                     className="grid md:grid-cols-3 grid-cols-2 gap-y-10"

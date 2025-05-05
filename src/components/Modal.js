@@ -21,7 +21,7 @@ const Modal = ({ isOpen, onClose, content, className = "" }) => {
                     onClick={onClose}
                 >
                     <motion.div
-                        className={`bg-white shadow-lg p-6 max-w-4xl mx-[2%] w-full relative ${className}`}
+                        className={`bg-white shadow-lg p-6 max-w-4xl max-h-[90vh] mx-[2%] w-full relative ${className} overflow-y-auto`}
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.9, opacity: 0 }}
@@ -40,13 +40,13 @@ const Modal = ({ isOpen, onClose, content, className = "" }) => {
                         </button>
 
                         {content ? (
-                            <div className="flex flex-col md:flex-row gap-6 ">
+                            <div className="flex flex-col md:flex-row gap-6 h-full">
                                 {image && (
-                                    <div className="w-full">
+                                    <div className="w-full h-full">
                                         <img
                                             src={image}
                                             alt={title || "Modal image"}
-                                            className="w-full"
+                                            className="max-h-[80vh] w-full object-contain"
                                         />
                                         {caption && !description && (
                                             <small className="text-center block text-gray-400 mt-3 text-sm">

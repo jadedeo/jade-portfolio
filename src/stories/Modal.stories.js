@@ -21,7 +21,7 @@ const Template = (args) => {
             </button> */}
 
             <motion.div
-                className="w-[40%] cursor-pointer hover:shadow-xl"
+                className="w-[25%] cursor-pointer hover:shadow-xl"
                 onClick={() => setIsOpen(true)}
                 whileHover={{ scale: 1.05 }}
             >
