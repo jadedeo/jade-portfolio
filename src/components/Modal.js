@@ -18,6 +18,7 @@ const Modal = ({ isOpen, onClose, content, className = "" }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
+                    onClick={onClose}
                 >
                     <motion.div
                         className={`bg-white shadow-lg p-6 max-w-4xl mx-[2%] w-full relative ${className}`}
@@ -77,15 +78,17 @@ const Modal = ({ isOpen, onClose, content, className = "" }) => {
                                         </div>
                                         {details?.length > 0 && (
                                             <div className="text-sm text-gray-400">
-                                                <hr className="mb-3" />
-                                                {details.map((item, i) => (
-                                                    <small
-                                                        className="block text-sm"
-                                                        key={i}
-                                                    >
-                                                        {item}
-                                                    </small>
-                                                ))}
+                                                <hr className="my-3" />
+                                                <div className="flex md:block gap-2">
+                                                    {details.map((item, i) => (
+                                                        <small
+                                                            className="block text-sm"
+                                                            key={i}
+                                                        >
+                                                            {item}
+                                                        </small>
+                                                    ))}
+                                                </div>
                                             </div>
                                         )}
                                     </div>

@@ -37,8 +37,8 @@ const ProjectCard = ({ id, project, orientation = "vertical" }) => {
     return (
         <>
             {orientation === "vertical" ? (
-                <div className="projectcard-vertical-component grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 hover:shadow-xl bg-white">
-                    <div className="w-full ">
+                <div className="projectcard-vertical-component grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 hover:shadow-xl bg-white grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out">
+                    <div className="w-full max-h-[400px]">
                         <img
                             src={project.image}
                             alt={project.title}
@@ -60,21 +60,20 @@ const ProjectCard = ({ id, project, orientation = "vertical" }) => {
                             <h3 className="text-sm text-gray-500">
                                 {project.subtitle}
                             </h3>
-                            {/* <hr className="" /> */}
                         </div>
                     </div>
                     <div className="px-5">
                         <p>{project.description}</p>
                     </div>
-                    <div className="flex gap-1 flex-wrap px-5 mb-5 h-fit">
+                    <div className="flex gap-1 flex-wrap px-5 mb-5 mt-3 h-fit">
                         {project.tags?.map((tag, i) => (
                             <Chip key={i} label={tag} />
                         ))}
                     </div>
                 </div>
             ) : (
-                <div className="projectcard-horizontal-component grid grid-cols-[2fr_3fr] gap-2 overflow-hidden max-w-screen-lg hover:shadow-md">
-                    {/* Left: Image */}
+                <div className="projectcard-horizontal-component grid grid-cols-[2fr_3fr] gap-2 overflow-hidden max-w-screen-lg hover:shadow-md grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out">
+                    {/* Image */}
                     <div className="w-full h-full">
                         <img
                             src={project.image}
@@ -83,25 +82,29 @@ const ProjectCard = ({ id, project, orientation = "vertical" }) => {
                         />
                     </div>
 
-                    {/* Right: Content */}
-                    <div className="flex flex-col p-4 gap-3">
-                        <div className="flex gap-4 items-start">
-                            <h2 className="font-display">
-                                {id.toLocaleString("en-US", {
-                                    minimumIntegerDigits: 2,
-                                    useGrouping: false,
-                                })}
-                            </h2>
-                            <div className="flex flex-col">
-                                <h2 className="font-bold text-xl leading-tight">
-                                    {project.title}
+                    {/* Content */}
+                    <div className="flex flex-col justify-between p-4 gap-3">
+                        <div>
+                            <div className="flex gap-4 items-start">
+                                <h2 className="font-display">
+                                    {id.toLocaleString("en-US", {
+                                        minimumIntegerDigits: 2,
+                                        useGrouping: false,
+                                    })}
                                 </h2>
-                                <h3 className="text-sm text-gray-500">
-                                    {project.subtitle}
-                                </h3>
+                                <div className="flex flex-col">
+                                    <h2 className="font-bold text-xl leading-tight">
+                                        {project.title}
+                                    </h2>
+                                    <h3 className="text-sm text-gray-500">
+                                        {project.subtitle}
+                                    </h3>
+                                </div>
                             </div>
+                            <p className="text-gray-700">
+                                {project.description}
+                            </p>
                         </div>
-                        <p className="text-gray-700">{project.description}</p>
                         <div className="flex gap-1 flex-wrap">
                             {project.tags?.map((tag, i) => (
                                 <Chip key={i} label={tag} />

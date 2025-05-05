@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Hero = ({ pageTitle, pageSubtitle }) => {
+const Hero = ({ pageTitle, pageSubtitle, children }) => {
     return (
         <div
             className={`hero-component w-full pt-40 pb-20 bg-slate-800 flex justify-center bg-cover bg-no-repeat bg-center bg-[url("/public/projectPlaceholder.png")] bg-blend-overlay px-[5%]`}
@@ -10,14 +11,15 @@ const Hero = ({ pageTitle, pageSubtitle }) => {
                     <h4>{pageSubtitle}</h4>
                     <h1 className="font-display ">{pageTitle}</h1>
                 </div>
-                <h6>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent gravida arcu dui, ut eleifend felis congue sit
-                    amet. Vivamus tincidunt sapien et quam ultrices hendrerit.
-                </h6>
+                <div className="flex flex-col gap-3">{children}</div>
             </div>
         </div>
     );
+};
+
+Hero.propTypes = {
+    pageTitle: PropTypes.string,
+    pageSubtitle: PropTypes.string,
 };
 
 export default Hero;

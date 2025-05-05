@@ -1,6 +1,15 @@
+import PropTypes from "prop-types";
+
 import React, { useRef, useState } from "react";
 import { motion, AnimatePresence, LayoutGroup } from "motion/react";
-const ExpandableTag = ({ iconClass, hoveredText, initialText = null }) => {
+import { iconClasses } from "@mui/material";
+
+const ExpandableTag = ({
+    iconClass,
+    hoveredText,
+    initialText = null,
+    variant = "dark",
+}) => {
     const width = useRef(0);
     const ref = useRef < HTMLDivElement > null;
     const [isHovering, setIsHovering] = useState(false);
@@ -21,7 +30,11 @@ const ExpandableTag = ({ iconClass, hoveredText, initialText = null }) => {
             >
                 <motion.div
                     layout
-                    className="inline-block relative text-gray-300 bg-gray-900 ring-1 ring-gray-800 px-4 py-1.5 tracking-wider text-sm font-medium whitespace- cursor-pointer"
+                    className={`inline-block relative ${
+                        variant == "dark"
+                            ? "text-white bg-black"
+                            : "text-black bg-white"
+                    } px-4 py-1.5 tracking-wider text-sm font-medium whitespace- cursor-pointer`}
                 >
                     <AnimatePresence initial={false} mode="wait">
                         <motion.span
@@ -33,15 +46,13 @@ const ExpandableTag = ({ iconClass, hoveredText, initialText = null }) => {
                         >
                             {isHovering ? (
                                 <div className="flex items-center gap-2 h-5">
-                                    <i className={`${iconClass} text-white`} />
+                                    <i className={`${iconClass} `} />
                                     <span>{hoveredText}</span>
                                 </div>
                             ) : (
                                 <div className="flex items-center gap-x-2 h-5">
-                                    <i className={`${iconClass} text-white`} />
-                                    {initialText && (
-                                        <span>LinkedIn Blah Blah</span>
-                                    )}
+                                    <i className={`${iconClass} `} />
+                                    {initialText && <span>{initialText}</span>}
                                 </div>
                             )}
                         </motion.span>
@@ -50,6 +61,13 @@ const ExpandableTag = ({ iconClass, hoveredText, initialText = null }) => {
             </motion.div>
         </LayoutGroup>
     );
+};
+
+ExpandableTag.propTypes = {
+    iconClass: PropTypes.string,
+    hoveredText: PropTypes.string,
+    initialText: PropTypes.string,
+    variant: PropTypes.oneOf(["dark", "light"]),
 };
 
 export default ExpandableTag;
