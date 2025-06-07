@@ -14,10 +14,10 @@ import ExpandableTag from "../components/ExpandableTag";
 import Quote from "../components/Quote";
 
 const Design = () => {
-    return (
-        <div id="design-page">
-            <Header />
-            <Hero
+	return (
+		<div id="design-page">
+			<Header />
+			{/* <Hero
                 pageTitle="Big Header Text Here"
                 pageSubtitle="Header subtitle here"
             >
@@ -41,144 +41,37 @@ const Design = () => {
                         />
                     </LayoutGroup>
                 </div>
-            </Hero>
+            </Hero> */}
 
-            <main className="min-h-[100dvh] py-10 px-[5%]">
-                <section
-                    id="design-projects-list"
-                    className="grid md:grid-cols-3 grid-cols-2 gap-y-10 py-5 max-w-screen-xl mx-auto"
-                >
-                    {designProjectList.map((project, index) => {
-                        return (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                whileHover={{ scale: 1.05 }}
-                                initial="hidden"
-                                animate="visible"
-                                custom={index}
-                                className="grid grid-rows-subgrid row-span-4 cursor-pointer gap-2"
-                            >
-                                <ProjectCard
-                                    key={index}
-                                    id={index + 1}
-                                    project={project}
-                                />
-                            </motion.div>
-                        );
-                    })}
-                </section>
+			<main className="min-h-[100dvh] py-10 px-[5%]">
+				<h1 className="font-display">design</h1>
 
-                <TextGroup
-                    heading={"Sample Heading"}
-                    subheading={"Sample subheading"}
-                >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed at ex quis enim suscipit tincidunt. Quisque et
-                        libero vitae tortor maximus pellentesque sit amet vel
-                        quam. Proin elit eros, sollicitudin non nisi sed,
-                        iaculis dignissim massa. Cras ullamcorper, enim non
-                        ultrices mattis, velit est ullamcorper eros, vel
-                        faucibus leo tortor id orci. Integer posuere dolor sed
-                        bibendum hendrerit. Duis eget enim diam. Donec nec
-                        dignissim quam, vitae volutpat felis.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed at ex quis enim suscipit tincidunt. Quisque et
-                        libero vitae tortor maximus pellentesque sit amet vel
-                        quam. Proin elit eros, sollicitudin non nisi sed,
-                        iaculis dignissim massa.
-                    </p>
-                </TextGroup>
+				<section
+					id="design-projects-list"
+					className="grid md:grid-cols-3 grid-cols-2 gap-y-10 py-5 max-w-screen-xl mx-auto"
+				>
+					{designProjectList.map((project, index) => {
+						return (
+							<motion.div
+								key={index}
+								variants={itemVariants}
+								whileHover={{ scale: 1.05 }}
+								initial="hidden"
+								animate="visible"
+								custom={index}
+								className="grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 hover:z-[10000]"
+							>
+								<ProjectCard
+									key={index}
+									id={index + 1}
+									project={project}
+								/>
+							</motion.div>
+						);
+					})}
+				</section>
 
-                <TextImage
-                    heading={"Sample heading"}
-                    subheading={"Sample subheading"}
-                    image={"projectPlaceholder.png"}
-                    imageAlt={"image alt text"}
-                >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed at ex quis enim suscipit tincidunt. Quisque et
-                        libero vitae tortor maximus pellentesque sit amet vel
-                        quam. Proin elit eros, sollicitudin non nisi sed,
-                        iaculis dignissim massa.
-                    </p>
-                </TextImage>
-
-                <TextGroup heading={""} subheading={"Sample subheading"}>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed at ex quis enim suscipit tincidunt. Quisque et
-                        libero vitae tortor maximus pellentesque sit amet vel
-                        quam. Proin elit eros, sollicitudin non nisi sed,
-                        iaculis dignissim massa.
-                    </p>
-                </TextGroup>
-                <Quote
-                    subheading={"My quote subheading!"}
-                    // image={"/userPlaceholder.png"}
-                >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed at ex quis enim suscipit tincidunt.{" "}
-                        <strong>
-                            Quisque et libero vitae tortor maximus pellentesque
-                        </strong>{" "}
-                        sit amet vel quam. Proin elit eros, sollicitudin non
-                        nisi sed, iaculis dignissim massa.
-                    </p>
-                </Quote>
-                <TextImage
-                    subheading={"Sample subheading"}
-                    image={"projectPlaceholder.png"}
-                    textPlacement="left"
-                    imageAlt={"image alt text"}
-                >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed at ex quis enim suscipit tincidunt. Quisque et
-                        libero vitae tortor maximus pellentesque sit amet vel
-                        quam. Proin elit eros, sollicitudin non nisi sed,
-                        iaculis dignissim massa.
-                    </p>
-                </TextImage>
-
-                <div className="flex gap-10 py-5 max-w-screen-xl mx-auto">
-                    <Quote
-                        subheading={"My quote subheading!"}
-                        image={"/userPlaceholder.png"}
-                    >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed at ex quis enim suscipit tincidunt.{" "}
-                            <strong>
-                                Quisque et libero vitae tortor maximus
-                                pellentesque
-                            </strong>{" "}
-                            sit amet vel quam. Proin elit eros, sollicitudin non
-                            nisi sed, iaculis dignissim massa.
-                        </p>
-                    </Quote>
-                    <Quote
-                        subheading={"My quote subheading!"}
-                        image={"/userPlaceholder.png"}
-                    >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed at ex quis enim suscipit tincidunt.{" "}
-                            <strong>
-                                Quisque et libero vitae tortor maximus
-                                pellentesque
-                            </strong>{" "}
-                            sit amet vel quam. Proin elit eros, sollicitudin non
-                            nisi sed, iaculis dignissim massa.
-                        </p>
-                    </Quote>
-                </div>
-                {/* <section
+				{/* <section
                     id="design-projects-list"
                     className="grid md:grid-cols-3 grid-cols-2 gap-y-10"
                 >
@@ -202,9 +95,9 @@ const Design = () => {
                         );
                     })}
                 </section> */}
-            </main>
-        </div>
-    );
+			</main>
+		</div>
+	);
 };
 
 export default Design;

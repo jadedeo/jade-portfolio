@@ -9,41 +9,41 @@ import devProjectList from "../resources/devProjectList.json";
 import { itemVariants } from "../resources/utils";
 
 const Development = () => {
-    return (
-        <div id="development-page">
-            <Header />
-            <main className="min-h-[100dvh] py-10 px-[5%]">
-                <section className="my-5">
-                    <h1 className="font-display">development</h1>
-                </section>
+	return (
+		<div id="development-page">
+			<Header />
+			<main className="min-h-[100dvh] py-10 px-[5%]">
+				<section className="my-5">
+					<h1 className="font-display">development</h1>
+				</section>
 
-                <img src="/projectPlaceholder.png" />
-
-                <section id="dev-projects-list" className="">
-                    {devProjectList
-                        // .filter((project) => project.type === "primary")
-                        .map((project, index) => {
-                            return (
-                                // <motion.div
-                                //   key={index}
-                                //   variants={itemVariants}
-                                //   initial="hidden"
-                                //   animate="visible"
-                                //   custom={index}
-                                // >
-                                <ProjectCard
-                                    key={project.id}
-                                    id={project.id}
-                                    project={project}
-                                    orientation={"vertical"}
-                                />
-                                // </motion.div>
-                            );
-                        })}
-                </section>
-            </main>
-        </div>
-    );
+				<section
+					id="design-projects-list"
+					className="grid sm:grid-cols-2 grid-cols-1 gap-y-10 py-5 max-w-screen-xl mx-auto"
+				>
+					{devProjectList.map((project, index) => {
+						return (
+							<motion.div
+								key={index}
+								variants={itemVariants}
+								whileHover={{ scale: 1.05 }}
+								initial="hidden"
+								animate="visible"
+								custom={index}
+								className="grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 hover:z-[10000]"
+							>
+								<ProjectCard
+									key={index}
+									id={index + 1}
+									project={project}
+								/>
+							</motion.div>
+						);
+					})}
+				</section>
+			</main>
+		</div>
+	);
 };
 
 export default Development;

@@ -1,8 +1,8 @@
 [
-    { "title": "home", "href": "/" },
-    { "title": "doodles", "href": "/" },
-    { "title": "design", "href": "/design" },
-    { "title": "development", "href": "/" },
-    { "title": "splash", "href": "/" },
-    { "title": "divisionPlatform", "href": "/" }
+	{ "component": "Home", "path": "/" },
+	{ "component": "Doodles", "path": "/doodles" },
+	{ "component": "Design", "path": "/design" },
+	{ "component": "Development", "path": "/development" },
+	{ "component": "Splash", "path": "/development/splash" },
+	{ "component": "DivisionPlatform", "path": "/development/divisionplatform" }
 ]
