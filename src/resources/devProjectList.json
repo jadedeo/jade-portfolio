@@ -4,7 +4,7 @@
 		"title": "Splash",
 		"subtitle": "Penguin Random House",
 		"type": "primary",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit. Vivamus tincidunt sapien et quam ultrices hendrerit.",
+		"description": "A proprietary, self-service tool for marketers building websites, sweepstakes & other marketing activation landing pages.",
 		"image": "placeholder1.jpeg",
 		"tags": ["Vue.js", "Tailwind CSS", "PHP", "Laravel", "Cypress"],
 		"link": "/development/splash"
@@ -14,7 +14,7 @@
 		"title": "Division Platform",
 		"subtitle": "Penguin Random House",
 		"type": "primary",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
+		"description": "A flexible Wordpress-based solution for streamlining website development & maintenance for publishing divisions' flagship properties & content marketing initiatives.",
 		"image": "placeholder2.jpeg",
 		"tags": [
 			"ReactJS",
@@ -31,7 +31,7 @@
 		"title": "FableFrame",
 		"subtitle": "Personal Project",
 		"type": "secondary",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. ",
+		"description": "A content management system for authors.",
 		"image": "placeholder3.jpeg",
 		"tags": [
 			"ReactJS",
@@ -41,16 +41,6 @@
 			"Express",
 			"MongoDB"
 		],
-		"link": "/development/divisionplatform"
-	},
-	{
-		"id": 4,
-		"title": "LitTunes",
-		"subtitle": "Personal Project",
-		"type": "secondary",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. ",
-		"image": "placeholder3.jpeg",
-		"tags": ["ReactJS", "React Redux"],
 		"link": "/development/divisionplatform"
 	}
 ]

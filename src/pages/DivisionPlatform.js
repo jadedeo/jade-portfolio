@@ -38,7 +38,7 @@ const DivisionPlatform = () => {
 				<div className="flex flex-col gap-[100px] px-[5%] mt-[100px]">
 					<FadeSnapSection>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
-							<div className="grid grid-cols-[1fr,1fr,2fr] sm:flex-nowrap gap-x-[5%] gap-y-14">
+							<div className="grid md:grid-cols-[1fr,1fr,2fr]  grid-cols-[1fr,1fr] sm:flex-nowrap gap-x-[5%] gap-y-14">
 								<div className="min-w-fit">
 									<h3 className="text-xl font-bold mb-2">
 										Role
@@ -70,26 +70,30 @@ const DivisionPlatform = () => {
 
 					<FadeSnapSection>
 						<section className="w-full max-w-screen-lg mx-auto my-10 flex flex-col gap-5">
-							<TextGroup
-								heading="Purpose + Impact"
-								subheading="In-house tech support & decreasing digital footprint"
-							>
+							<TextGroup heading="overall impact">
 								<p>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit. Praesent gravida arcu dui,
-									ut eleifend felis congue sit amet. Vivamus
-									tincidunt sapien et quam ultrices hendrerit.
-									Vivamus tincidunt sapien et quam ultrices
-									hendrerit. Lorem ipsum dolor sit amet,
-									consectetur adipiscing elit. Praesent
-									gravida arcu dui, ut eleifend felis congue
-									sit amet. Vivamus tincidunt sapien et quam
-									ultrices hendrerit. Vivamus tincidunt sapien
-									et quam ultrices hendrerit.
+									By streamlining site creation and
+									integrating directly with PRH’s title data,
+									the platform{" "}
+									<strong>
+										cut launch timelines to just a few
+										weeks, eliminated the need for external
+										dev resources, and ensured ongoing
+										compliance with legal, security, and
+										accessibility standards
+									</strong>
+									. Its adoption enabled scalable content
+									management, enhanced marketing capabilities,
+									and a consistent user experience across
+									dozens of imprint sites.
+								</p>
+
+								<p>
+									Sites built with Division Platform include:
 								</p>
 							</TextGroup>
 
-							<section className="grid grid-cols-5 gap-5 justify-items-center items-center mt-3">
+							<section className="grid grid-cols-3 md:grid-cols-5 gap-5 justify-items-center items-center mt-3">
 								<a
 									href="https://crownpublishing.com/"
 									target="_blank"
@@ -156,11 +160,12 @@ const DivisionPlatform = () => {
 									imagePlacement="left"
 								>
 									<p className="mt-3">
-										In addition to allowing authors to share
-										social links pointing the the audio
-										download, the audiobook share modal
-										embed allows the WCA to showcase an
-										embeddable audio player on a site.
+										[REWRITE THIS] In addition to allowing
+										authors to share social links pointing
+										the the audio download, the audiobook
+										share modal embed allows the WCA to
+										showcase an embeddable audio player on a
+										site.
 									</p>
 									<ul>
 										<li>

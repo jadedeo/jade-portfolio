@@ -1,23 +1,23 @@
 [
 	{
-		"title": "San Francisco Recreation + Parks",
+		"title": "San Francisco Recreation & Parks",
 		"subtitle": "MHCI Capstone",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit.",
 		"tags": ["Service Design", "UX Design", "UI Design"],
 		"image": "projectPlaceholder.png"
 	},
 	{
-		"title": "Libby + TBR Integration",
-		"subtitle": "Personal Project",
+		"title": "ADHD Accessibility at Giant Eagle",
+		"subtitle": "MHCI Capstone",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit. Praesent gravida arcu dui, ut eleifend felis congue sit amet.",
 		"tags": ["UX Design", "UI Design"],
 		"image": "projectPlaceholder.png"
 	},
 	{
-		"title": "Project Title Three",
-		"subtitle": "Project Subtitle",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet.",
-		"tags": ["UX Design", "UI Design", "Service Design"],
+		"title": "Libby & TBR Integration",
+		"subtitle": "Personal Project",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit. Praesent gravida arcu dui, ut eleifend felis congue sit amet.",
+		"tags": ["UX Design", "UI Design"],
 		"image": "projectPlaceholder.png"
 	}
 ]

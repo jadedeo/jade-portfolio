@@ -19,7 +19,7 @@ const Development = () => {
 
 				<section
 					id="design-projects-list"
-					className="grid sm:grid-cols-2 grid-cols-1 gap-y-10 py-5 max-w-screen-xl mx-auto"
+					className="grid md:grid-cols-2 grid-cols-1 gap-y-10 py-5 max-w-screen-xl mx-auto"
 				>
 					{devProjectList.map((project, index) => {
 						return (

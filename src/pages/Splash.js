@@ -24,21 +24,19 @@ const Splash = () => {
 						image={projectData.image}
 					>
 						<p>
-							Division Platform is a flexible, WordPress-based web
-							framework developed to support Penguin Random
-							House's diverse publishing divisions and imprints.
-							The system provides a centralized yet highly
-							customizable way to create industry-facing websites,
-							automatically syncing book metadata from PRH's
-							internal systems while maintaining each imprint’s
-							distinct visual identity.
+							Splash is a self-service tool to build landing pages
+							with the intention of driving awareness, sales, and
+							newsletter sign-ups for books and authors. Splash
+							also now supports basic sweepstakes that were
+							previously found in SWAT, as well as more complex
+							sweepstakes.
 						</p>
 					</Hero>
 				</FadeSnapSection>
 				<div className="flex flex-col gap-[100px] px-[5%] mt-[100px]">
 					<FadeSnapSection>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
-							<div className="grid grid-cols-[1fr,1fr,2fr] sm:flex-nowrap gap-x-[5%] gap-y-14">
+							<div className="grid md:grid-cols-[1fr,1fr,2fr]  grid-cols-[1fr,1fr]  sm:flex-nowrap gap-x-[5%] gap-y-14">
 								<div className="min-w-fit">
 									<h3 className="text-xl font-bold mb-2">
 										Role
@@ -69,33 +67,75 @@ const Splash = () => {
 					</FadeSnapSection>
 
 					<FadeSnapSection>
+						<section className=" w-full max-w-screen-lg mx-auto my-10">
+							<TextGroup heading="app overview"></TextGroup>
+							<section className="flex flex-col gap-10 mt-5">
+								<TextImage
+									// heading="Team List Module"
+									subheading="Splash Dashboard"
+									image="prhProjects/splashDash.png"
+									imageAlt="splash dashboard"
+									imagePlacement="left"
+								>
+									<p className="mt-3">
+										Lorem ipsum blah blah
+									</p>
+									<ul>
+										<li>
+											Nullam dapibus cursus dui, eget
+											egestas elit tempus a. Curabitur a
+											feugiat ex, sit amet consectetur
+											nibh.
+										</li>
+									</ul>
+								</TextImage>
+								<TextImage
+									// heading="Team List Module"
+									subheading="Splash Admin"
+									image="prhProjects/splashAdmin.png"
+									imageAlt="splash admin"
+									imagePlacement="left"
+								>
+									<p className="mt-3">
+										Lorem ipsum blah blah
+									</p>
+									<ul>
+										<li>
+											Nullam dapibus cursus dui, eget
+											egestas elit tempus a. Curabitur a
+											feugiat ex, sit amet consectetur
+											nibh.
+										</li>
+									</ul>
+								</TextImage>
+							</section>
+						</section>
+					</FadeSnapSection>
+
+					<FadeSnapSection>
 						<section className="w-full max-w-screen-lg mx-auto my-10 flex flex-col gap-5">
-							<TextGroup
-								heading="Purpose + Impact"
-								subheading="In-house tech support & decreasing digital footprint"
-							>
+							<TextGroup heading="overall impact">
 								<p>
-									Division Platform is a flexible,
-									WordPress-based web framework developed to
-									support Penguin Random House's diverse
-									publishing divisions and imprints. The
-									system provides a centralized yet highly
-									customizable way to create industry-facing
-									websites, automatically syncing book
-									metadata from PRH's internal systems while
-									maintaining each imprint’s distinct visual
-									identity.
+									For the platform as a whole, in the first
+									three quarters of 2023, the team saw page
+									views increase more than 10% & purchase
+									clicks more than 70% since 2022. As of April
+									2024, Splash sites averaged 800,000 total
+									monthly visits.
+								</p>
+								<p>
+									Among live Splash sites are the following:
 								</p>
 							</TextGroup>
 
-							<section className="grid grid-cols-5 gap-5 justify-items-center items-center mt-3">
+							<section className="grid grid-cols-3 md:grid-cols-5 gap-5 justify-items-center items-center mt-3">
 								<a
 									href="https://crownpublishing.com/"
 									target="_blank"
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/crownLogo.png"
 									/>
 								</a>
@@ -105,7 +145,7 @@ const Splash = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px] "
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/brrLogo.png"
 									/>
 								</a>
@@ -115,7 +155,7 @@ const Splash = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/kokilaLogo.avif"
 									/>
 								</a>
@@ -125,8 +165,8 @@ const Splash = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
-										src="prhProjects/audioLogo.png"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
+										src="prhProjects/audioLogo2.avif"
 									/>
 								</a>
 								<a
@@ -135,7 +175,7 @@ const Splash = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/kddLogo.jpg"
 									/>
 								</a>
@@ -147,14 +187,52 @@ const Splash = () => {
 						<section className=" w-full max-w-screen-lg mx-auto my-10">
 							<TextGroup heading="Gift with Purchase">
 								<p>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit. Praesent gravida arcu dui,
-									ut eleifend felis congue sit amet. Vivamus
-									tincidunt sapien et quam ultrices hendrerit.
-									Vivamus tincidunt sapien et quam ultrices
-									hendrerit.
+									The Gift with Purchase module launched as
+									one of Splash’s most impactful feature
+									additions,{" "}
+									<strong>
+										aimed at helping PRH teams drive
+										consumer engagement and boost book
+										sales—especially during preorder
+										campaigns
+									</strong>
+									.
+								</p>
+								<p>
+									By enabling purchase incentive offers to run
+									directly on existing Splash pages, the
+									feature{" "}
+									<strong>
+										reduced reliance on third-party
+										platforms, ensured legal and security
+										compliance for data collection, and
+										streamlined workflows for marketing
+										teams
+									</strong>
+									. It was designed to support a wide range of
+									promotional formats and empower teams to
+									deliver a more cohesive, brand-aligned
+									experience for readers.
 								</p>
 							</TextGroup>
+
+							{/* <TextGroup subheading="how it works">
+								<p className="mt-3">
+									On the frontend, the module features a form
+									that allows consumers to submit their proof
+									of purchase information in order to receive
+									either a digital gift (supplied immediately)
+									or another type of gift (requiring manual
+									work on your part to fulfill the offer).
+								</p>
+								<p>
+									Once the pre-set module expiration date and
+									time is reached, the module will
+									automatically disappear from the page and
+									consumers will no longer be able to see it
+									and/or submit a form.
+								</p>
+							</TextGroup> */}
 
 							<section className="flex flex-col gap-10 mt-10">
 								<TextImage
@@ -165,12 +243,7 @@ const Splash = () => {
 									imagePlacement="left"
 								>
 									<p className="mt-3">
-										Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit. Aenean commodo
-										vulputate sollicitudin. Sed accumsan
-										nisi purus, et aliquam orci sagittis eu.
-										In eleifend faucibus sapien eu
-										imperdiet.
+										Lorem ipsum blah blah
 									</p>
 									<ul>
 										<li>
@@ -232,6 +305,18 @@ const Splash = () => {
 									</ul>
 								</TextImage>
 							</section>
+						</section>
+					</FadeSnapSection>
+
+					<FadeSnapSection>
+						<section className=" w-full max-w-screen-lg mx-auto my-10">
+							<TextGroup heading="Vue 3 migration">
+								<p>
+									Beginning in Fall 2023, the Splash
+									application underwent a extensive upgrade
+									from Vue 2 to 3. This included ...
+								</p>
+							</TextGroup>
 						</section>
 					</FadeSnapSection>
 				</div>
