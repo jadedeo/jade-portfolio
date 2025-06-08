@@ -50,3 +50,8 @@ li {
 li + li {
 	margin-top: 10px;
 }
+
+h1,
+h2 {
+	text-transform: lowercase;
+}

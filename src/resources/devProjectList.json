@@ -6,7 +6,7 @@
 		"type": "primary",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. Vivamus tincidunt sapien et quam ultrices hendrerit. Vivamus tincidunt sapien et quam ultrices hendrerit.",
 		"image": "placeholder1.jpeg",
-		"skills": ["Vue.js", "Tailwind CSS", "PHP", "Laravel", "Cypress"],
+		"tags": ["Vue.js", "Tailwind CSS", "PHP", "Laravel", "Cypress"],
 		"link": "/development/splash"
 	},
 	{
@@ -28,22 +28,29 @@
 	},
 	{
 		"id": 3,
+		"title": "FableFrame",
+		"subtitle": "Personal Project",
+		"type": "secondary",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. ",
+		"image": "placeholder3.jpeg",
+		"tags": [
+			"ReactJS",
+			"React Router",
+			"Tailwind CSS",
+			"Node.js",
+			"Express",
+			"MongoDB"
+		],
+		"link": "/development/divisionplatform"
+	},
+	{
+		"id": 4,
 		"title": "LitTunes",
 		"subtitle": "Personal Project",
 		"type": "secondary",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet. ",
 		"image": "placeholder3.jpeg",
 		"tags": ["ReactJS", "React Redux"],
-		"link": "/development/divisionplatform"
-	},
-	{
-		"id": 4,
-		"title": "Storybook Component Library",
-		"subtitle": "Personal Project",
-		"type": "secondary",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida arcu dui, ut eleifend felis congue sit amet.Vivamus tincidunt sapien et quam ultrices hendrerit.",
-		"image": "placeholder3.jpeg",
-		"tags": ["ReactJS", "Storybook"],
 		"link": "/development/divisionplatform"
 	}
 ]

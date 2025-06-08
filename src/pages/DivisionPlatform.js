@@ -59,7 +59,7 @@ const DivisionPlatform = () => {
 										Skills & Tools
 									</h3>
 									<div className="flex gap-x-1 gap-y-2 flex-wrap h-fit">
-										{skills.map((tag, i) => (
+										{projectData.tags.map((tag, i) => (
 											<Chip key={i} label={tag} />
 										))}
 									</div>
@@ -75,16 +75,17 @@ const DivisionPlatform = () => {
 								subheading="In-house tech support & decreasing digital footprint"
 							>
 								<p>
-									Division Platform is a flexible,
-									WordPress-based web framework developed to
-									support Penguin Random House's diverse
-									publishing divisions and imprints. The
-									system provides a centralized yet highly
-									customizable way to create industry-facing
-									websites, automatically syncing book
-									metadata from PRH's internal systems while
-									maintaining each imprint’s distinct visual
-									identity.
+									Lorem ipsum dolor sit amet, consectetur
+									adipiscing elit. Praesent gravida arcu dui,
+									ut eleifend felis congue sit amet. Vivamus
+									tincidunt sapien et quam ultrices hendrerit.
+									Vivamus tincidunt sapien et quam ultrices
+									hendrerit. Lorem ipsum dolor sit amet,
+									consectetur adipiscing elit. Praesent
+									gravida arcu dui, ut eleifend felis congue
+									sit amet. Vivamus tincidunt sapien et quam
+									ultrices hendrerit. Vivamus tincidunt sapien
+									et quam ultrices hendrerit.
 								</p>
 							</TextGroup>
 
@@ -95,7 +96,7 @@ const DivisionPlatform = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/crownLogo.png"
 									/>
 								</a>
@@ -105,7 +106,7 @@ const DivisionPlatform = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px] "
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/brrLogo.png"
 									/>
 								</a>
@@ -115,7 +116,7 @@ const DivisionPlatform = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/kokilaLogo.avif"
 									/>
 								</a>
@@ -125,8 +126,8 @@ const DivisionPlatform = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
-										src="prhProjects/audioLogo.png"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
+										src="prhProjects/audioLogo2.avif"
 									/>
 								</a>
 								<a
@@ -135,7 +136,7 @@ const DivisionPlatform = () => {
 									rel="noreferrer"
 								>
 									<img
-										className="max-h-[75px]"
+										className="max-h-[75px] grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 										src="prhProjects/kddLogo.jpg"
 									/>
 								</a>
@@ -149,7 +150,6 @@ const DivisionPlatform = () => {
 
 							<section className="flex flex-col gap-10 mt-5 ">
 								<TextImage
-									// heading="Team List Module"
 									subheading="Audiobook Share Modal"
 									image="prhProjects/audioModal1.png"
 									imageAlt="audio modal 1"
@@ -201,27 +201,21 @@ const DivisionPlatform = () => {
 									</p>
 									<ul>
 										<li>
-											The block can be inserted into any
-											page via the Gutenberg editor & may
-											include one or an unlimited number
-											of Team Members.
+											Add a headshot, bio, job title, and
+											optional carousel of featured titles
+											for each team member
 										</li>
 										<li>
-											From the editor, a WCA can build a
-											list by adding Team Members using
-											the Team Member Name.
+											Insert as a standalone module into
+											any page or use as its own page
 										</li>
 										<li>
-											When entered, the Team Member Name
-											and Photo appear in the page editor.
-											Team Members may be re-ordered
-											within the module.
+											Display them as a list or grid (bio
+											drawer color is customizable)
 										</li>
 										<li>
-											On the front-end, the Team Member
-											Photo, Bio, and Carousel (if
-											applicable) appear in a list with
-											the Team Member Name and Job Title
+											To create a page, add a Featured
+											Content Module for a header
 										</li>
 									</ul>
 								</TextImage>
@@ -234,27 +228,51 @@ const DivisionPlatform = () => {
 								>
 									<p className="mt-3">
 										This custom Gutenberg block can be
-										inserted into any page or post. Users
-										can manipulate the following settings:
+										inserted into any page or post. Options
+										for customization include:
 									</p>
 									<ul>
-										<li>Image</li>
-										<li>Layout (stacked v. split)</li>
 										<li>
-											Orientation (for split layout only;
-											left v. right)
+											Add a headshot, bio, job title, and
+											optional carousel of featured titles
+											for each team member
 										</li>
 										<li>
-											Base style (default, Bump Up, or
-											Curved)
+											Insert as a standalone module into
+											any page or use as its own page
 										</li>
-										<li>Background Color</li>
-										<li>Headline text & color</li>
-										<li>Body text & color</li>
 										<li>
-											CTA (button/text link or social
-											media insert)
+											Display them as a list or grid (bio
+											drawer color is customizable)
 										</li>
+										<li>
+											To create a page, add a Featured
+											Content Module for a header
+										</li>
+									</ul>
+								</TextImage>
+
+								<TextImage
+									subheading="Footer"
+									image="prhProjects/footer1.png"
+									imageAlt="footer 1"
+									imagePlacement="left"
+								>
+									<p className="mt-3">
+										The footer accepts the first 8 items
+										added via WordPress admin & allows the
+										WCA to display a division’s social
+										platforms so that site visitors can
+										easily connect. Options for
+										customization include:
+									</p>
+									<ul>
+										<li>Column or Small</li>
+										<li>Colors</li>
+										<li>Size</li>
+										<li>Logo placement</li>
+										<li>Social icons</li>
+										<li>Number of links</li>
 									</ul>
 								</TextImage>
 							</section>

@@ -32,12 +32,12 @@ const ProjectCard = ({ id, project, orientation = "vertical" }) => {
 							})}
 						</h2>
 						<div className="flex flex-col gap-1">
-							<h2 className="font-bold text-xl leading-none">
+							<h3 className="font-bold text-xl leading-none">
 								{project.title}
-							</h2>
-							<h3 className="text-sm text-gray-500">
-								{project.subtitle}
 							</h3>
+							<h4 className="text-sm text-gray-500">
+								{project.subtitle}
+							</h4>
 						</div>
 					</div>
 					<div className="px-5">

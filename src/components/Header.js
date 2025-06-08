@@ -17,10 +17,10 @@ const Header = () => {
 				>
 					<Link to="/">
 						<div className="flex py-2 gap-3 items-center">
-							{/* <img src="logo.png" className="h-10" /> */}
-							<h3 className="font-semibold font-display">
+							<img src="darkLogo.png" className="h-10" />
+							{/* <h3 className="font-semibold font-display">
 								jade deo
-							</h3>
+							</h3> */}
 						</div>
 					</Link>
 

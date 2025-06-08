@@ -11,6 +11,7 @@ const TextImage = ({
 	imagePlacement = "right",
 	children,
 	className,
+	addImageShadow = true,
 }) => {
 	return (
 		<section
@@ -22,11 +23,15 @@ const TextImage = ({
 					imagePlacement === "right" ? "order-1" : "order-[-1]"
 				}`}
 			>
-				<img
-					src={image}
-					alt={imageAlt}
-					className="mx-auto max-h-full object-contain shadow-lg"
-				/>
+				{image && (
+					<img
+						src={image}
+						alt={imageAlt}
+						className={`mx-auto max-h-full object-contain ${
+							addImageShadow ? "shadow-lg" : ""
+						}`}
+					/>
+				)}
 			</motion.div>
 			<div
 				className={`w-fit mx-auto p-10 ${
