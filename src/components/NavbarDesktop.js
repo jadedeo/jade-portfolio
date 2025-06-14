@@ -19,7 +19,7 @@ const NavbarDesktop = () => {
 			initial={{ y: 25, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ duration: 0.7, delay: 0.5, ease: "easeInOut" }}
-			className={`hidden md:flex gap-[2em] items-center`}
+			className={`hidden md:flex  items-center`}
 		>
 			{routes
 				.filter(
@@ -30,13 +30,16 @@ const NavbarDesktop = () => {
 				)
 				.map((route, index) => {
 					return isHomepage ? (
-						<LinkTag
-							key={index}
-							to={route.path}
-							className="py-2 px-4"
-						>
-							{route.component}
-						</LinkTag>
+						<>
+							<LinkTag
+								key={index}
+								to={route.path}
+								className="py-2 px-4"
+							>
+								{route.component}
+							</LinkTag>
+							{"\u2022"}
+						</>
 					) : (
 						<LinkTag
 							key={index}

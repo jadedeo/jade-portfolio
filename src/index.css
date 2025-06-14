@@ -41,12 +41,12 @@
 
 ul {
 	list-style: circle;
-	margin-left: 20px;
+	margin-left: 40px;
 }
 
 ol {
 	list-style: decimal;
-	margin-left: 15px;
+	margin-left: 50px;
 }
 
 li {

@@ -1,22 +1,22 @@
-import React from "react";
+import { motion } from "motion/react";
 
 const StickyNote = ({ children, className = "" }) => {
 	// Random tilt between -3deg and 3deg
 	const tilt = Math.floor(Math.random() * 7) - 3;
-	const colors = ["#fef9c3", "#f6c2d9", "#bcdfc9", "#fbbf24", "#a1c8e9"];
-	const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 	return (
-		<div
-			className={`flex flex-col gap-2  text-gray-900 shadow-lg p-5 min-w-[200px] max-w-[300px] min-h-[200px] h-fit  transition-transform duration-300 ease-in-out hover:scale-105 hover:z-10 font-handwritten text-xl ${className}`}
+		<motion.div
+			className={`flex flex-col gap-2 bg-yellow-200 text-gray-900 shadow-lg p-5 min-w-[200px] max-w-[300px] min-h-[200px] h-fit font-handwritten text-xl ${className}`}
+			initial={{ rotate: tilt, scale: 1 }}
+			animate={{ rotate: tilt, scale: 1 }}
+			whileHover={{ rotate: 0, scale: 1.05, zIndex: 10 }}
+			transition={{ type: "spring", stiffness: 200, damping: 15 }}
 			style={{
-				transform: `rotate(${tilt}deg)`,
 				boxShadow: "4px 4px 6px rgba(0, 0, 0, 0.3)",
-				backgroundColor: randomColor,
 			}}
 		>
 			{children}
-		</div>
+		</motion.div>
 	);
 };
 

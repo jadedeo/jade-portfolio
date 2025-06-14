@@ -16,7 +16,7 @@ const TextImage = ({
 }) => {
 	return (
 		<section
-			className={`textimage-component max-w-screen-lg mx-auto grid ${
+			className={`textimage-component ${imagePlacement}-variant max-w-screen-lg mx-auto grid ${
 				imagePlacement === "bottom" || imagePlacement === "top"
 					? "md:grid-cols-1"
 					: "md:grid-cols-2"
@@ -48,7 +48,9 @@ const TextImage = ({
 						? "pb-10"
 						: imagePlacement === "top"
 						? "pt-10"
-						: "p-10"
+						: imagePlacement === "left"
+						? "py-10 pl-10"
+						: "py-10 pr-10"
 				} ${
 					imagePlacement === "right" || imagePlacement === "bottom"
 						? "order-[-1]"
@@ -68,7 +70,7 @@ TextImage.propTypes = {
 	subheading: PropTypes.string,
 	image: PropTypes.string,
 	imageAlt: PropTypes.string,
-	imagePlacement: PropTypes.oneOf(["right", "left"]),
+	imagePlacement: PropTypes.oneOf(["right", "left", "top", "bottom"]),
 };
 
 export default TextImage;
