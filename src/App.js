@@ -8,6 +8,7 @@ import Design from "./pages/Design.js";
 import Development from "./pages/Development.js";
 import Splash from "../src/pages/Splash.js";
 import DivisionPlatform from "../src/pages/DivisionPlatform.js";
+import GiantEagle from "../src/pages/GiantEagle.js";
 
 import routes from "../src/resources/routes.json";
 
@@ -20,6 +21,7 @@ const componentMap = {
 	Development,
 	Splash,
 	DivisionPlatform,
+	GiantEagle,
 };
 
 function App() {

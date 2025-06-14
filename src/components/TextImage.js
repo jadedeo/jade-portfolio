@@ -12,15 +12,24 @@ const TextImage = ({
 	children,
 	className,
 	addImageShadow = true,
+	addComponentShadow = true,
 }) => {
 	return (
 		<section
-			className={`textimage-component max-w-screen-lg mx-auto grid md:grid-cols-2 grid-cols-1 items-center ${className} shadow-lg`}
+			className={`textimage-component max-w-screen-lg mx-auto grid ${
+				imagePlacement === "bottom" || imagePlacement === "top"
+					? "md:grid-cols-1"
+					: "md:grid-cols-2"
+			}  grid-cols-1 items-center ${
+				addComponentShadow ? "" : ""
+			}  ${className}`}
 		>
 			<motion.div
 				// whileHover={{ scale: 1.05 }}
 				className={`w-full h-full max-h-[600px] overflow-hidden p-9 bg-gray-100 place-content-center ${
-					imagePlacement === "right" ? "order-1" : "order-[-1]"
+					imagePlacement === "right" || imagePlacement === "bottom"
+						? "order-1"
+						: "order-[-1]"
 				}`}
 			>
 				{image && (
@@ -34,8 +43,16 @@ const TextImage = ({
 				)}
 			</motion.div>
 			<div
-				className={`w-fit mx-auto p-10 ${
-					imagePlacement === "right" ? "order-[-1]" : "order-1"
+				className={`w-fit mx-auto ${
+					imagePlacement === "bottom"
+						? "pb-10"
+						: imagePlacement === "top"
+						? "pt-10"
+						: "p-10"
+				} ${
+					imagePlacement === "right" || imagePlacement === "bottom"
+						? "order-[-1]"
+						: "order-1"
 				}`}
 			>
 				<TextGroup heading={heading} subheading={subheading}>

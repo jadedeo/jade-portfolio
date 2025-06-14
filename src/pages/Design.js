@@ -25,7 +25,7 @@ const Design = () => {
 
 				<section
 					id="design-projects-list"
-					className="grid md:grid-cols-2 grid-cols-1 gap-y-10 py-5 max-w-screen-xl mx-auto"
+					className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-10 py-5 max-w-screen-xl mx-auto"
 				>
 					{designProjectList.map((project, index) => {
 						return (

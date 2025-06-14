@@ -11,7 +11,6 @@ const DivisionPlatform = () => {
 	const location = useLocation();
 	const { projectData } = location.state;
 	console.log("projectData", projectData);
-	const skills = projectData.tags;
 
 	return (
 		<>

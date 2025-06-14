@@ -4,5 +4,9 @@
 	{ "component": "Design", "path": "/design" },
 	{ "component": "Development", "path": "/development" },
 	{ "component": "Splash", "path": "/development/splash" },
-	{ "component": "DivisionPlatform", "path": "/development/divisionplatform" }
+	{
+		"component": "DivisionPlatform",
+		"path": "/development/divisionplatform"
+	},
+	{ "component": "GiantEagle", "path": "/design/gianteagle" }
 ]
