@@ -13,7 +13,6 @@ const ProjectCard = ({ id, project, orientation = "vertical" }) => {
 			{orientation === "vertical" ? (
 				<NavLink
 					to={project.link}
-					state={{ projectData: project }}
 					className="projectcard-vertical-component grid grid-rows-subgrid row-span-4 cursor-pointer gap-2 hover:shadow-xl bg-white grayscale hover:grayscale-0 transition-[filter] duration-500 ease-in-out"
 				>
 					<div className="w-full max-h-[400px]">

@@ -5,18 +5,24 @@ import Chip from "../components/Chip";
 import TextGroup from "../components/TextGroup";
 import TextImage from "../components/TextImage";
 import ProjectCard from "../components/ProjectCard";
-import FadeSnapSection from "../components/FadeSnapSection";
+import FadeSection from "../components/FadeSection";
+
+import useScrollDirection from "../hooks/useScrollDirection";
+import devProjectList from "../resources/devProjectList.json";
 
 const DivisionPlatform = () => {
-	const location = useLocation();
-	const { projectData } = location.state;
+	const projectData = devProjectList.find(
+		(project) => project.title == "Division Platform"
+	);
 	console.log("projectData", projectData);
+
+	const scrollDir = useScrollDirection();
 
 	return (
 		<>
 			{/* <Header /> */}
 			<main className="snap-y snap-mandatory scroll-smooth  mb-[50px] min-h-dvh ">
-				<FadeSnapSection className="h-dvh">
+				<section className="h-dvh">
 					<Hero
 						title={projectData.title}
 						subtitle={projectData.subtitle}
@@ -33,9 +39,9 @@ const DivisionPlatform = () => {
 							distinct visual identity.
 						</p>
 					</Hero>
-				</FadeSnapSection>
+				</section>
 				<div className="flex flex-col gap-[100px] px-[5%] mt-[100px]">
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
 							<div className="grid md:grid-cols-[1fr,1fr,2fr]  grid-cols-[1fr,1fr] sm:flex-nowrap gap-x-[5%] gap-y-14">
 								<div className="min-w-fit">
@@ -65,9 +71,9 @@ const DivisionPlatform = () => {
 								</div>
 							</div>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="w-full max-w-screen-lg mx-auto my-10 flex flex-col gap-5">
 							<TextGroup heading="overall impact">
 								<p>
@@ -145,9 +151,9 @@ const DivisionPlatform = () => {
 								</a>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className=" w-full max-w-screen-lg mx-auto my-10">
 							<TextGroup heading="Contributions"></TextGroup>
 
@@ -281,7 +287,7 @@ const DivisionPlatform = () => {
 								</TextImage>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 				</div>
 			</main>
 		</>

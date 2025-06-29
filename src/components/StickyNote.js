@@ -6,7 +6,7 @@ const StickyNote = ({ children, className = "" }) => {
 
 	return (
 		<motion.div
-			className={`flex flex-col gap-2 bg-yellow-200 text-gray-900 shadow-lg p-5 min-w-[200px] max-w-[300px] min-h-[200px] h-fit font-handwritten text-xl ${className}`}
+			className={`break-inside-avoid flex flex-col gap-5 bg-yellow-200 shadow-lg p-5 min-w-[200px] max-w-[300px] min-h-[200px] h-fit font-handwritten text-xl ${className}`}
 			initial={{ rotate: tilt, scale: 1 }}
 			animate={{ rotate: tilt, scale: 1 }}
 			whileHover={{ rotate: 0, scale: 1.05, zIndex: 10 }}

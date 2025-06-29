@@ -13,6 +13,7 @@ const TextImage = ({
 	className,
 	addImageShadow = true,
 	addComponentShadow = true,
+	mat = true,
 }) => {
 	return (
 		<section
@@ -26,7 +27,9 @@ const TextImage = ({
 		>
 			<motion.div
 				// whileHover={{ scale: 1.05 }}
-				className={`w-full h-full max-h-[600px] overflow-hidden p-9 bg-gray-100 place-content-center ${
+				className={`w-full h-full max-h-[600px] overflow-hidden ${
+					mat ? "p-9" : "p-0"
+				} bg-gray-100 place-content-center ${
 					imagePlacement === "right" || imagePlacement === "bottom"
 						? "order-1"
 						: "order-[-1]"

@@ -61,3 +61,7 @@ h1,
 h2 {
 	text-transform: lowercase;
 }
+
+div.font-handwritten {
+	line-height: 1.1em;
+}

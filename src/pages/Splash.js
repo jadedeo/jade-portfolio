@@ -5,19 +5,24 @@ import Chip from "../components/Chip";
 import TextGroup from "../components/TextGroup";
 import TextImage from "../components/TextImage";
 import ProjectCard from "../components/ProjectCard";
-import FadeSnapSection from "../components/FadeSnapSection";
+import FadeSection from "../components/FadeSection";
+
+import useScrollDirection from "../hooks/useScrollDirection";
+import devProjectList from "../resources/devProjectList.json";
 
 const Splash = () => {
-	const location = useLocation();
-	const { projectData } = location.state;
+	const projectData = devProjectList.find(
+		(project) => project.title == "Splash"
+	);
 	console.log("projectData", projectData);
-	const skills = projectData.tags;
+
+	const scrollDir = useScrollDirection();
 
 	return (
 		<>
 			{/* <Header /> */}
 			<main className="snap-y snap-mandatory scroll-smooth  mb-[50px] min-h-dvh ">
-				<FadeSnapSection className="h-dvh">
+				<section className="h-dvh">
 					<Hero
 						title={projectData.title}
 						subtitle={projectData.subtitle}
@@ -32,9 +37,9 @@ const Splash = () => {
 							sweepstakes.
 						</p>
 					</Hero>
-				</FadeSnapSection>
+				</section>
 				<div className="flex flex-col gap-[100px] px-[5%] mt-[100px]">
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
 							<div className="grid md:grid-cols-[1fr,1fr,2fr]  grid-cols-[1fr,1fr]  sm:flex-nowrap gap-x-[5%] gap-y-14">
 								<div className="min-w-fit">
@@ -64,9 +69,9 @@ const Splash = () => {
 								</div>
 							</div>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className=" w-full max-w-screen-lg mx-auto my-10">
 							<TextGroup heading="app overview"></TextGroup>
 							<section className="flex flex-col gap-10 mt-5">
@@ -110,9 +115,9 @@ const Splash = () => {
 								</TextImage>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="w-full max-w-screen-lg mx-auto my-10 flex flex-col gap-5">
 							<TextGroup heading="overall impact">
 								<p>
@@ -181,9 +186,9 @@ const Splash = () => {
 								</a>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className=" w-full max-w-screen-lg mx-auto my-10">
 							<TextGroup heading="Gift with Purchase">
 								<p>
@@ -306,9 +311,9 @@ const Splash = () => {
 								</TextImage>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className=" w-full max-w-screen-lg mx-auto my-10">
 							<TextGroup heading="Vue 3 migration">
 								<p>
@@ -318,7 +323,7 @@ const Splash = () => {
 								</p>
 							</TextGroup>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 				</div>
 			</main>
 		</>

@@ -1,23 +1,28 @@
 import { useLocation } from "react-router-dom";
-// import Header from "../components/Header";
 import Hero from "../components/Hero";
-// import Chip from "../components/Chip";
 import TextGroup from "../components/TextGroup";
 import TextImage from "../components/TextImage";
-import FadeSnapSection from "../components/FadeSnapSection";
+import FadeSection from "../components/FadeSection";
 import StickyNote from "../components/StickyNote";
 import ChatBubble from "../components/ChatBubble";
+import AccordionItem from "../components/AccordionItem";
+
+import useScrollDirection from "../hooks/useScrollDirection";
+import designProjectList from "../resources/designProjectList.json";
 
 const GiantEagle = () => {
-	const location = useLocation();
-	const { projectData } = location.state;
+	const projectData = designProjectList.find(
+		(project) => project.title == "AR for Accessibility at Giant Eagle"
+	);
 	console.log("projectData", projectData);
+
+	const scrollDir = useScrollDirection();
 
 	return (
 		<>
 			{/* <Header /> */}
 			<main className="snap-y snap-mandatory scroll-smooth  mb-[50px] min-h-dvh ">
-				<FadeSnapSection className="h-dvh">
+				<section className="h-dvh">
 					<Hero
 						title={projectData.title}
 						subtitle={projectData.subtitle}
@@ -30,41 +35,9 @@ const GiantEagle = () => {
 							Hyperactive Disorder (ADHD).
 						</p>
 					</Hero>
-				</FadeSnapSection>
+				</section>
 				<div className="flex flex-col gap-[25px] md:gap-[50px] lg:gap-[100px] px-[5%] mt-[100px]">
-					{/* <FadeSnapSection>
-						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
-							<div className="grid md:grid-cols-[1fr,1fr,2fr]  grid-cols-[1fr,1fr] sm:flex-nowrap gap-x-[5%] gap-y-14">
-								<div className="min-w-fit">
-									<h3 className="text-xl font-bold mb-2">
-										Role
-									</h3>
-									<p>Contract Web Developer</p>
-								</div>
-								<div className="min-w-fit">
-									<h3 className="text-xl font-bold mb-2">
-										Team
-									</h3>
-									<p>1-2 product owners</p>
-									<p>2-4 developers</p>
-									<p>1 product designer</p>
-									<p>1 QA engineer</p>
-								</div>
-								<div>
-									<h3 className="text-xl font-bold mb-2">
-										Skills & Tools
-									</h3>
-									<div className="flex gap-x-1 gap-y-2 flex-wrap h-fit">
-										{projectData.tags.map((tag, i) => (
-											<Chip key={i} label={tag} />
-										))}
-									</div>
-								</div>
-							</div>
-						</section>
-					</FadeSnapSection> */}
-
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
 							<TextGroup
 								heading="what we designed"
@@ -99,9 +72,9 @@ const GiantEagle = () => {
 								</p>
 							</TextGroup>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto flex flex-col gap-2">
 							<TextGroup heading="why we designed it" />
 
@@ -116,7 +89,15 @@ const GiantEagle = () => {
 											The lights are too bright, there is
 											a lot of sounds, smells, and a lot
 											going on.
-											<small>source here</small>
+											<a
+												href="https://www.reddit.com/r/ADHD/comments/wvn80k/comment/ilh6ldt/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+												className="hover:underline text-gray-400"
+											>
+												<small>
+													r/ADHD | Overstimulated
+													while grocery shopping?
+												</small>
+											</a>
 										</ChatBubble>
 										<ChatBubble direction="in">
 											... if I need more than a couple of
@@ -125,7 +106,15 @@ const GiantEagle = () => {
 												It's too overwhelming for me to
 												do by myself.
 											</strong>
-											<small>source here</small>
+											<a
+												href="https://www.reddit.com/r/ADHD/comments/c1a3cm/comment/erc93va/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+												className="hover:underline text-gray-400"
+											>
+												<small>
+													r/ADHD | Grocery shopping is
+													the natural enemy
+												</small>
+											</a>
 										</ChatBubble>
 									</div>
 									<StickyNote className="mx-auto mt-5">
@@ -158,6 +147,15 @@ const GiantEagle = () => {
 												everything and its time
 												consuming and often stressful.
 											</p>
+											<a
+												href="https://www.reddit.com/r/ADHD/comments/c1a3cm/comment/erbwi0x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+												className="hover:underline text-gray-400"
+											>
+												<small>
+													r/ADHD | Grocery shopping is
+													the natural enemy
+												</small>
+											</a>
 										</ChatBubble>
 									</div>
 									<StickyNote className="mx-auto mt-5">
@@ -170,9 +168,9 @@ const GiantEagle = () => {
 								</div>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto flex flex-col gap-2">
 							<TextImage
 								heading="evaluating existing hardware"
@@ -188,13 +186,20 @@ const GiantEagle = () => {
 								</p>
 
 								<p>
-									The RayNeo X2’s came the closest. In
-									addition to consolidated hardware, they
-									offered a limited set of interactions that
-									remain confined to the glasses themselves
-									that we’ve adopted for our experience. To
-									satisfy the other items on our list, we
-									designed & propose a more adaptable frame.
+									The{" "}
+									<a
+										className="underline"
+										href="https://www.rayneo.com/products/tcl-rayneo-x2?srsltid=AfmBOoq9WdgyyYHJm3EXgnE_3tgTXjWF206wtdcatxhQnlsD42NwpA9w"
+									>
+										RayNeo X2s
+									</a>{" "}
+									came the closest. In addition to
+									consolidated hardware, they offered a
+									limited set of interactions that remain
+									confined to the glasses themselves that
+									we’ve adopted for our experience. To satisfy
+									the other items on our list, we designed &
+									propose a more adaptable frame.
 								</p>
 							</TextImage>
 
@@ -247,71 +252,68 @@ const GiantEagle = () => {
 								</StickyNote>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
-						<section className="flex flex-col gap-10 mt-5 ">
-							<div className="">
-								<TextImage
-									heading="designing more adaptable hardware solution"
-									// subheading="Hardware Specifications"
-									imageAlt="giant eagle glasses"
-									image="giantEagle/newGlassesAll.png"
-									addImageShadow={false}
-									addComponentShadow={false}
-									// imagePlacement="left"
-								>
-									<p>
-										Our imagined solution includes the
-										following features:
-									</p>
-									<ol>
-										<li>Power button</li>
-										<li>
-											Left & right touch panels to capture
-											sliding & tapping actions
-										</li>
-										<li>Two front-facing cameras</li>
-										<li>
-											Expandable/retractable components to
-											fit differently sized individuals
-										</li>
-										<li>
-											Hollow frame is functional on it’s
-											own but also fits over glasses
-										</li>
-									</ol>
-								</TextImage>
+					<FadeSection scrollDir={scrollDir}>
+						<section className="py-[50px] w-full max-w-screen-lg mx-auto flex flex-col gap-5 ">
+							<TextGroup heading="designing a more adaptable hardware solution"></TextGroup>
 
-								<TextImage
-									subheading="Iteration"
-									imageAlt="giant eagle glasses"
-									image="giantEagle/glassesIteration.png"
-									addImageShadow={false}
-									addComponentShadow={false}
-									// imagePlacement="left"
-								>
-									<p>
-										Hardware was revised with thicker frames
-										to better accommodate mechanical
-										components
-									</p>
-								</TextImage>
-							</div>
+							{/* <div className=""> */}
+							<TextImage
+								subheading="Specifications"
+								imageAlt="giant eagle glasses"
+								image="giantEagle/newGlassesAll.png"
+								addImageShadow={false}
+								addComponentShadow={false}
+								// imagePlacement="left"
+							>
+								<p>
+									Our imagined solution includes the following
+									features:
+								</p>
+								<ol>
+									<li>Power button</li>
+									<li>
+										Left & right touch panels to capture
+										sliding & tapping actions
+									</li>
+									<li>Two front-facing cameras</li>
+									<li>
+										Expandable/retractable components to fit
+										differently sized individuals
+									</li>
+									<li>
+										Hollow frame is functional on it’s own
+										but also fits over glasses
+									</li>
+								</ol>
+							</TextImage>
+
+							<TextImage
+								subheading="Iteration"
+								imageAlt="giant eagle glasses"
+								image="giantEagle/glassesIteration.png"
+								addImageShadow={false}
+								addComponentShadow={false}
+							>
+								<p>
+									Hardware was revised with thicker frames to
+									better accommodate mechanical components.
+								</p>
+							</TextImage>
+							{/* </div> */}
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="flex flex-col gap-10 mt-5 ">
 							<div className="">
 								<TextImage
 									heading="interactions & gestures"
-									// subheading="Hardware Specifications"
 									imageAlt="giant eagle glasses"
 									image="giantEagle/glassesInteractions.png"
 									addImageShadow={false}
 									addComponentShadow={false}
-									// imagePlacement="left"
 								>
 									<p>
 										Users may make these 3 gestures on
@@ -321,11 +323,99 @@ const GiantEagle = () => {
 								</TextImage>
 							</div>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
-							<TextGroup heading="experience design">
+							<TextGroup heading="overall functionality" />
+							<section className="columns-1 sm:columns-2 md:columns-3 gap-5 space-y-5 mt-5">
+								<StickyNote>
+									<div>
+										<p className="line-through decoration-[1px] text-yellow-600">
+											View full shopping list
+										</p>
+										<p className="font-semibold">
+											View current item only
+										</p>
+									</div>
+									<p>
+										Carousels & scrollable lists created too
+										much visual clutter, which we're trying
+										to cut down on.
+									</p>
+								</StickyNote>
+
+								<StickyNote>
+									<div>
+										<p className="line-through decoration-[1px] text-yellow-600">
+											Edit shopping list
+										</p>
+										<p className="font-semibold">
+											Skip/delete current item
+										</p>
+									</div>
+									<p>
+										Fully editing capabilities (searching,
+										reordering, etc.) would introduce too
+										much complexity and require more
+										granular controls, suggesting bulkier
+										hardware.
+									</p>
+								</StickyNote>
+
+								<StickyNote>
+									<div>
+										<p className="line-through decoration-[1px] text-yellow-600">
+											Receieve recommendations for generic
+											items in-experience
+										</p>
+										<p className="font-semibold">
+											No in-experience recommendations
+										</p>
+									</div>
+									<p>
+										Meant to solve for cases where users add
+										"bread" to their list, we planned to use
+										pre-set preferences to make suggestions
+										for specific products while shopping -
+									</p>
+									<p>
+										But providng personalized
+										recommendations would be most effective
+										during in-app shopping list creation.
+									</p>
+								</StickyNote>
+
+								<StickyNote>
+									<p className="font-semibold">
+										Control basic experience settings
+									</p>
+
+									<p>
+										In addition to being able to configure
+										settings in-app, users should be able to
+										make adjustments from inside the
+										experience.
+									</p>
+								</StickyNote>
+
+								<StickyNote>
+									<p className="font-semibold">Way-finding</p>
+									<p>
+										Though users can change how they prefer
+										to navigate the store through in-app
+										settings, the experience guides them
+										along the most optimized route by
+										default.
+									</p>
+								</StickyNote>
+							</section>
+						</section>
+					</FadeSection>
+
+					<FadeSection scrollDir={scrollDir}>
+						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
+							<TextGroup heading="components & ui design">
 								{/* <p>
 									Division Platform is a flexible,
 									WordPress-based web framework developed to
@@ -333,11 +423,85 @@ const GiantEagle = () => {
 									publishing divisions and imprints.
 								</p> */}
 							</TextGroup>
-							<section className="flex flex-col gap-10 mt-5 "></section>
+							<section className="flex flex-col gap-10 mt-5 ">
+								<TextImage
+									subheading="Main Informational Component"
+									imageAlt="giant eagle glasses"
+									image="giantEagle/infoComponentVariants.png"
+									addImageShadow={false}
+									addComponentShadow={false}
+									imagePlacement="bottom"
+								>
+									<p>
+										When a user’s list includes{" "}
+										<strong>more than 1 item</strong>, the
+										current & next item are both shown. When
+										a user’s list includes{" "}
+										<strong>1 item</strong>, only the
+										current item is shown. When a user{" "}
+										<strong>
+											has picked up everything
+										</strong>{" "}
+										on their list, they are directed to the
+										checkout counter.
+									</p>
+								</TextImage>
+								<TextImage
+									subheading="Setting Controls"
+									imageAlt="giant eagle glasses"
+									image="giantEagle/settingsComponent.png"
+									addImageShadow={false}
+									addComponentShadow={false}
+									imagePlacement="bottom"
+								>
+									<p>
+										The user may interact with the settings
+										menu through the gestures mentioned
+										previously.
+									</p>
+									<p>
+										<strong>
+											Sliding along either of the touch
+											panels
+										</strong>{" "}
+										will progress them through the available
+										configuration options.{" "}
+										<strong>Tapping once</strong> will allow
+										them to select a specific setting or
+										setting option o configure.{" "}
+										<strong>Double tapping</strong> will
+										move them back into the previous state.
+									</p>
+								</TextImage>
+								<TextImage
+									subheading="Product Filter"
+									imageAlt="giant eagle glasses"
+									image="giantEagle/productFilter.png"
+									addComponentShadow={false}
+									imagePlacement="right"
+									mat={false}
+								>
+									<p>
+										The product filter serves to diminish
+										the distractions created by a constant
+										bombardment of text & colors on
+										packaging, as well as to keep users
+										focused on the specific item they need
+										as opposed to the endless options
+										available.
+									</p>
+									<p>
+										Users can adjust the opacity of the
+										filter to their desired level either
+										in-app or through the experience’s
+										settings menu.
+									</p>
+								</TextImage>
+							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
 							<TextGroup heading="mobile app integration">
 								{/* <p>
@@ -385,21 +549,98 @@ const GiantEagle = () => {
 								</TextImage>
 							</section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 
-					<FadeSnapSection>
+					<FadeSection scrollDir={scrollDir}>
 						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
 							<TextGroup heading="other considerations & caveats">
-								{/* <p>
-									Division Platform is a flexible,
-									WordPress-based web framework developed to
-									support Penguin Random House's diverse
-									publishing divisions and imprints.
-								</p> */}
+								<AccordionItem
+									heading="Buisness Implications"
+									isOpenDefault={true}
+								>
+									<p>
+										We recognize that essentially “hiding”
+										the vast majority of items may not be
+										seen to be in GE’s best interest -
+										retail often relies on enticing shoppers
+										by keeping products in plain view.
+									</p>
+									<p>
+										We would like to make the case that
+										making stores more accessible to people
+										of varied sensitivities is a smarter
+										business move than forcing them to
+										endure an uncomfortable experience.
+									</p>
+									<p>
+										Investing in the comfort of customers is
+										likely to strengthen overall trust &
+										loyalty over time.
+									</p>
+								</AccordionItem>
+								<AccordionItem heading="Reliance on Unchanging Organization">
+									Lorem ipsum blah blah blah
+								</AccordionItem>
+								<AccordionItem heading="Assumptions of Ability">
+									<p>
+										In order to interact with the glasses’
+										controls,{" "}
+										<strong>
+											users will need to (at least
+											briefly) have one hand free
+										</strong>
+										. Looking into providing a voice-control
+										option could be a helpful alternative.
+									</p>
+									<p>
+										<strong>
+											As a medium, AR assumes some level
+											of visual acuity
+										</strong>
+										. However, the auditory component of the
+										experience & it’s reliance on the
+										contract of bright signals in a dulled
+										environment may still make it suitable
+										for those with partial/reduced vision.
+									</p>
+									<p>
+										<strong>
+											Subtitles/CC are not provided with
+											the experience
+										</strong>
+										, because audio is a purely optional
+										feature. The experience is, by default,
+										accessible to the hearing-impaired.
+									</p>
+								</AccordionItem>
+								<AccordionItem heading="(Current) Technological Limitations">
+									<p>
+										We acknowledge that our experience
+										assumes a level of performance just
+										beyond the current capabilities of AR
+										devices. However, we imagine that, with
+										constant advancement in the field, these
+										limitations will decrease in a few short
+										years.
+									</p>
+									<p>
+										<strong>Field of view (FoV)</strong>{" "}
+										will likely expand RayNeo X2’s currently
+										have a FoV of 25°, but the industry
+										average is about 30-50°
+									</p>
+									<p>
+										<strong>Resolutio</strong>n will likely
+										increase RayNeo X2’s currently have a
+										resolution of 640x480 per eye, but the
+										RayNeo Air 3S XREAL One both reach
+										1920x1080
+									</p>
+								</AccordionItem>
 							</TextGroup>
 							<section className="flex flex-col gap-10 mt-5 "></section>
 						</section>
-					</FadeSnapSection>
+					</FadeSection>
 				</div>
 			</main>
 		</>

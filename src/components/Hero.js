@@ -9,7 +9,7 @@ const Hero = ({ title, subtitle, image, children }) => {
 
 	return (
 		<div
-			className={`hero-component h-full w-full  bg-slate-800 justify-center flex bg-cover bg-no-repeat bg-center  bg-blend-overlay px-[5%]`}
+			className={`hero-component h-full w-full  bg-slate-900 justify-center flex bg-cover bg-no-repeat bg-center  bg-blend-overlay px-[5%]`}
 			style={{ backgroundImage: `url(${imageUrl})` }}
 		>
 			<section className=" w-full max-w-screen-lg m-auto ">

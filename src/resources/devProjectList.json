@@ -42,5 +42,15 @@
 			"MongoDB"
 		],
 		"link": "/development/divisionplatform"
+	},
+	{
+		"id": 4,
+		"title": "A Jahaji's Shadow",
+		"subtitle": "Personal Project",
+		"type": "secondary",
+		"description": "Visualizations of the intergenerational trauma of the decedents of indentured servitude in ex-colonies.",
+		"image": "development/jahajisShadow/jahajisShadowCover.png",
+		"tags": ["D3.js", "Svelte", "Data Visualization"],
+		"link": "/development/divisionplatform"
 	}
 ]
