@@ -1,5 +1,8 @@
 import { useLocation } from "react-router-dom";
+import { useRef } from "react";
+
 import Hero from "../components/Hero";
+import Header from "../components/Header";
 import TextGroup from "../components/TextGroup";
 import TextImage from "../components/TextImage";
 import FadeSection from "../components/FadeSection";
@@ -8,6 +11,7 @@ import ChatBubble from "../components/ChatBubble";
 import AccordionItem from "../components/AccordionItem";
 
 import useScrollDirection from "../hooks/useScrollDirection";
+import useInView from "../hooks/useInView"; // import your hook
 import designProjectList from "../resources/designProjectList.json";
 
 const GiantEagle = () => {
@@ -17,12 +21,14 @@ const GiantEagle = () => {
 	console.log("projectData", projectData);
 
 	const scrollDir = useScrollDirection();
+	const heroRef = useRef(null);
+	const isHeroInView = useInView(heroRef, { threshold: 0.2 }); // adjust threshold if needed
 
 	return (
 		<>
-			{/* <Header /> */}
-			<main className="snap-y snap-mandatory scroll-smooth  mb-[50px] min-h-dvh ">
-				<section className="h-dvh">
+			<Header useLightLogo={isHeroInView} />
+			<main className=" mb-[50px] min-h-dvh ">
+				<section ref={heroRef} className="h-dvh">
 					<Hero
 						title={projectData.title}
 						subtitle={projectData.subtitle}
@@ -414,7 +420,7 @@ const GiantEagle = () => {
 					</FadeSection>
 
 					<FadeSection scrollDir={scrollDir}>
-						<section className="py-[50px] w-full max-w-screen-lg mx-auto ">
+						<section className="py-[50px] w-full max-w-screen-lg mx-auto">
 							<TextGroup heading="components & ui design">
 								{/* <p>
 									Division Platform is a flexible,
@@ -562,8 +568,8 @@ const GiantEagle = () => {
 										We recognize that essentially “hiding”
 										the vast majority of items may not be
 										seen to be in GE’s best interest -
-										retail often relies on enticing shoppers
-										by keeping products in plain view.
+										retail relies on enticing shoppers by
+										keeping products in plain view.
 									</p>
 									<p>
 										We would like to make the case that

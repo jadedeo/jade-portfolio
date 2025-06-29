@@ -3,31 +3,30 @@ import NavbarMobile from "./NavbarMobile";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ useLightLogo }) => {
 	const location = useLocation();
-	const isHomepage = location.pathname == "/" ? true : false;
-	// console.log("isHomepage", isHomepage);
+	const isHomepage = location.pathname === "/";
+
+	const logoSrc = useLightLogo
+		? "/jade-portfolio/lightLogo.png"
+		: "/jade-portfolio/darkLogo.png";
 
 	return (
 		!isHomepage && (
-			<>
+			<div className="w-full">
 				<header
 					id="site-header"
-					className="flex w-full justify-between py-3 px-[5%]  bg-white bg-opacity-45"
+					className="flex py-0 px-2 fixed right-3 top-5 z-[100000]"
 				>
+					<NavbarDesktop useLightText={useLightLogo} />
 					<Link to="/">
-						<div className="flex py-2 gap-3 items-center">
-							<img src="darkLogo.png" className="h-10" />
-							{/* <h3 className="font-semibold font-display">
-								jade deo
-							</h3> */}
+						<div className="flex p-2 items-center">
+							<img src={logoSrc} className="h-10" />
 						</div>
 					</Link>
-
-					<NavbarDesktop />
 					<NavbarMobile />
 				</header>
-			</>
+			</div>
 		)
 	);
 };

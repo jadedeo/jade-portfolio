@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 
 // pages
 import Home from "../src/pages/Home.js";
+import Resume from "../src/pages/Resume.js";
+import About from "../src/pages/About.js";
 import Doodles from "./pages/Doodles.js";
 import Design from "./pages/Design.js";
 import Development from "./pages/Development.js";
@@ -16,6 +18,8 @@ console.log(routes);
 
 const componentMap = {
 	Home,
+	Resume,
+	About,
 	Doodles,
 	Design,
 	Development,
@@ -26,7 +30,7 @@ const componentMap = {
 
 function App() {
 	return (
-		<div className="App bg-white h-100dvh">
+		<div className="App bg-white h-100dvh scroll-smooth">
 			<Routes>
 				{routes.map((route, index) => {
 					const Component = componentMap[route.component];

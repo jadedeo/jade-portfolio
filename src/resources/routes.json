@@ -1,5 +1,6 @@
 [
 	{ "component": "Home", "path": "/" },
+
 	{ "component": "Doodles", "path": "/doodles" },
 	{ "component": "Design", "path": "/design" },
 	{ "component": "Development", "path": "/development" },
@@ -8,5 +9,7 @@
 		"component": "DivisionPlatform",
 		"path": "/development/divisionplatform"
 	},
-	{ "component": "GiantEagle", "path": "/design/gianteagle" }
+	{ "component": "GiantEagle", "path": "/design/gianteagle" },
+	{ "component": "Resume", "path": "/resume" },
+	{ "component": "About", "path": "/about" }
 ]

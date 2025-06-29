@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import routes from "../resources/routes.json";
 
-const NavbarDesktop = () => {
+const NavbarDesktop = ({ useLightText }) => {
 	const location = useLocation();
 	const isHomepage = location.pathname == "/" ? true : false;
 
@@ -19,14 +19,18 @@ const NavbarDesktop = () => {
 			initial={{ y: 25, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ duration: 0.7, delay: 0.5, ease: "easeInOut" }}
-			className={`hidden md:flex  items-center`}
+			className={`hidden md:flex md:gap-5 md:px-5 items-center ${
+				useLightText ? "text-white" : "text-black"
+			} `}
 		>
 			{routes
 				.filter(
 					(route) =>
 						route.component == "Design" ||
 						route.component == "Development" ||
-						route.component == "Doodles"
+						route.component == "Doodles" ||
+						route.component == "Resume" ||
+						route.component == "About"
 				)
 				.map((route, index) => {
 					return isHomepage ? (
@@ -44,7 +48,7 @@ const NavbarDesktop = () => {
 						<LinkTag
 							key={index}
 							to={route.path}
-							className="py-2 px-4"
+							className=" text-sm"
 						>
 							{route.component}
 						</LinkTag>

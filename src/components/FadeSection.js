@@ -8,7 +8,7 @@ const FadeSection = ({ children, className = "", scrollDir = "down" }) => {
 	return (
 		<motion.section
 			ref={ref}
-			className={`snap-center ${className}`}
+			className={`${className}`}
 			initial={{ opacity: 0, y: scrollDir === "down" ? 50 : -50 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: false }}

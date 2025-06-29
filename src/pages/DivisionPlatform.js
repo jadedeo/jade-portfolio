@@ -21,7 +21,7 @@ const DivisionPlatform = () => {
 	return (
 		<>
 			{/* <Header /> */}
-			<main className="snap-y snap-mandatory scroll-smooth  mb-[50px] min-h-dvh ">
+			<main className="  mb-[50px] min-h-dvh ">
 				<section className="h-dvh">
 					<Hero
 						title={projectData.title}

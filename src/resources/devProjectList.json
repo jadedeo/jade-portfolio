@@ -4,7 +4,7 @@
 		"title": "Splash",
 		"subtitle": "Penguin Random House",
 		"type": "primary",
-		"description": "A proprietary, self-service tool for marketers building websites, sweepstakes & other marketing activation landing pages.",
+		"description": "A proprietary, self-service tool for marketers building websites, sweepstakes & other marketing activation landing pages",
 		"image": "placeholder1.jpeg",
 		"tags": ["Vue.js", "Tailwind CSS", "PHP", "Laravel", "Cypress"],
 		"link": "/development/splash"
@@ -14,7 +14,7 @@
 		"title": "Division Platform",
 		"subtitle": "Penguin Random House",
 		"type": "primary",
-		"description": "A flexible Wordpress-based solution for streamlining website development & maintenance for publishing divisions' flagship properties & content marketing initiatives.",
+		"description": "A flexible Wordpress-based solution for streamlining website development & maintenance for publishing divisions' flagship properties & content marketing initiatives",
 		"image": "placeholder2.jpeg",
 		"tags": [
 			"ReactJS",
@@ -31,7 +31,7 @@
 		"title": "FableFrame",
 		"subtitle": "Personal Project",
 		"type": "secondary",
-		"description": "A content management system for authors.",
+		"description": "A content management system for authors",
 		"image": "placeholder3.jpeg",
 		"tags": [
 			"ReactJS",
@@ -48,7 +48,7 @@
 		"title": "A Jahaji's Shadow",
 		"subtitle": "Personal Project",
 		"type": "secondary",
-		"description": "Visualizations of the intergenerational trauma of the decedents of indentured servitude in ex-colonies.",
+		"description": "Visualizations for the discussion of intergenerational trauma experienced by the decedents of indentured servitude in ex-colonies",
 		"image": "development/jahajisShadow/jahajisShadowCover.png",
 		"tags": ["D3.js", "Svelte", "Data Visualization"],
 		"link": "/development/divisionplatform"
